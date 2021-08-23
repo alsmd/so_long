@@ -1,31 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   game_init.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/23 09:21:43 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/23 13:10:18 by flavio           ###   ########.fr       */
+/*   Created: 2021/08/23 13:10:41 by flavio            #+#    #+#             */
+/*   Updated: 2021/08/23 14:17:52 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/so_long.h"
+#include "../../includes/so_long.h"
 
-int	main(int argc, char *argv[])
+void	game_init(t_game *game)
 {
-	t_game	game;
-	int		w;
-	
-	if (argc == 2)
-	{
-		if (check_map(argv[1], &game))
-			game_config(&game);
-		else
-			return (1);
-		game_init(&game);
-	}
-	else
-		return (1);
-	return (0);
+	mlx_put_image_to_window(game->vars.mlx, game->vars.win, game->map.full_map.img, 0, 0);
+	mlx_loop(game->vars.mlx);
 }

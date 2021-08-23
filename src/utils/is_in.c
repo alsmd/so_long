@@ -1,31 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   is_in.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/23 09:21:43 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/23 13:10:18 by flavio           ###   ########.fr       */
+/*   Created: 2021/08/23 10:01:15 by flavio            #+#    #+#             */
+/*   Updated: 2021/08/23 10:02:26 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/so_long.h"
+#include "../../includes/so_long.h"
 
-int	main(int argc, char *argv[])
+int	is_in(char *str, char c)
 {
-	t_game	game;
-	int		w;
-	
-	if (argc == 2)
+	while (*str)
 	{
-		if (check_map(argv[1], &game))
-			game_config(&game);
-		else
+		if (*str == c)
 			return (1);
-		game_init(&game);
+		str++;
 	}
-	else
-		return (1);
 	return (0);
 }

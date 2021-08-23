@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 09:21:04 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/23 09:34:17 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/23 13:37:02 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,15 @@
 
 /*INCLUDES*/
 #include "../mlx/mlx.h"
-
-
+#include "get_next_line.h"
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <unistd.h>
+#include <limits.h>
+#include <stdlib.h>
+#include <errno.h>
+#include <stdio.h>
 /*DEFINES*/
 # define SO_LONG_H
 # define W 119
@@ -23,6 +30,7 @@
 # define S 115
 # define D 100
 # define BLOCK_SIZE 64
+# define OBJECTS "EC01P"
 
 /*STRUCTS*/
 typedef	struct	s_vars
@@ -43,7 +51,7 @@ typedef struct s_data
 
 typedef struct s_map
 {
-	char	*layout;
+	char	**layout;
 	t_data	full_map;
 	t_data	map;
 	int		x;
@@ -56,7 +64,7 @@ typedef struct s_player
 	int		frame;
 	int		x;
 	int		y;
-	int		step;
+	int		steps;
 }	t_player;
 
 typedef struct s_item
@@ -80,6 +88,18 @@ typedef struct	s_game
 
 
 /*Prototypes*/
-
+void	*ft_calloc(size_t nmemb, size_t size);
+int		ft_strlen(const char *s);
+char	*ft_substr(char const *s, unsigned int start, size_t len);
+int		is_in(char *str, char c);
+int		check_map(char	*map_path, t_game *game);
+void	game_config(t_game *game);
+void	game_init(t_game *game);
+void	my_mlx_pixel_put(t_data *data, int x, int y, int color);
+int		my_mlx_get_pixel(t_data *data, int x, int y);
+void	copy_img_from(t_data *dest, t_data *src, int x_src, int y_src, int width, int height);
+void	copy_img_to(t_data *dest, t_data *src, int x_dest, int y_dest, int width, int height);
+void	clear_image(t_data *img, int width, int height, int color);
+void	map_config(t_game *game);
 
 #endif

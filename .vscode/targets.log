@@ -1,0 +1,467 @@
+make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+# GNU Make 4.2.1
+# Built for x86_64-pc-linux-gnu
+# Copyright (C) 1988-2016 Free Software Foundation, Inc.
+# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+# This is free software: you are free to change and redistribute it.
+# There is NO WARRANTY, to the extent permitted by law.
+
+# Make data base, printed on Mon Aug 23 13:36:49 2021
+
+# Variables
+
+# 'override' directive
+GNUMAKEFLAGS := 
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# automatic
+?F = $(notdir $?)
+# environment
+DESKTOP_SESSION = ubuntu
+# default
+.SHELLFLAGS := -c
+# environment
+XDG_SESSION_CLASS = user
+# environment
+SNAP_COMMON = /var/snap/code/common
+# environment
+XDG_SESSION_TYPE = x11
+# environment
+VSCODE_LOG_NATIVE = false
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# environment
+IM_CONFIG_PHASE = 1
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# environment
+XAUTHORITY = /run/user/1000/gdm/Xauthority
+# environment
+GDMSESSION = ubuntu
+# environment
+XMODIFIERS = @im=ibus
+# makefile
+CURDIR := /home/flavio/Desktop/so_long
+# makefile
+SHELL = /bin/sh
+# makefile (from 'Makefile', line 17)
+RM = rm -f
+# environment
+SNAP_DATA = /var/snap/code/72
+# environment
+VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
+# environment
+JOURNAL_STREAM = 8:46123
+# makefile (from 'Makefile', line 12)
+CFLAGS = -g
+# environment
+XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
+# environment
+SNAP_INSTANCE_NAME = code
+# environment
+SNAP_ARCH = amd64
+# makefile (from 'Makefile', line 1)
+MAKEFILE_LIST :=  Makefile
+# automatic
+@F = $(notdir $@)
+# environment
+GIO_LAUNCHED_DESKTOP_FILE = /var/lib/snapd/desktop/applications/code_code.desktop
+# environment
+USERNAME = flavio
+# environment
+MAKELEVEL := 0
+# environment
+XDG_DATA_DIRS = /usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop
+# environment
+DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
+# environment
+VSCODE_VERBOSE_LOGGING = true
+# environment
+_ = /snap/code/72/usr/share/code/code
+# environment
+LC_CTYPE = pt_BR.UTF-8
+# makefile (from 'Makefile', line 8)
+OBJS = $(SRCS:.c=.o)
+# environment
+MANAGERPID = 951
+# environment
+LESSOPEN = | /usr/bin/lesspipe %s
+# environment
+LC_NAME = pt_BR.UTF-8
+# environment
+VSCODE_CWD = /home/flavio
+# environment
+GSETTINGS_SCHEMA_DIR = /snap/code/72/usr/share/glib-2.0/schemas
+# default
+MAKE_HOST := x86_64-pc-linux-gnu
+# environment
+PATH = /home/flavio/.local/bin:/home/flavio/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+# environment
+GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
+# environment
+SESSION_MANAGER = local/flavio-S14BW01:@/tmp/.ICE-unix/1245,unix/flavio-S14BW01:/tmp/.ICE-unix/1245
+# environment
+XDG_RUNTIME_DIR = /run/user/1000
+# environment
+GDK_PIXBUF_MODULE_FILE = /home/flavio/snap/code/common/.cache/gdk-pixbuf-loaders.cache
+# environment
+SNAP = /snap/code/72
+# environment
+SNAP_VERSION = 3866c355
+# environment
+XDG_MENU_PREFIX = gnome-
+# environment
+VSCODE_LOG_STACK = false
+# environment
+DISABLE_WAYLAND = 1
+# environment
+VSCODE_CRASH_REPORTER_START_OPTIONS = {"companyName":"Microsoft","productName":"VSCode","submitURL":"appcenter://code?aid=fba07a4d-84bd-4fc8-a125-9640fc8ce171&uid=5b0aee19-f674-4b13-a8a1-a5060eb11a3f&iid=5b0aee19-f674-4b13-a8a1-a5060eb11a3f&sid=5b0aee19-f674-4b13-a8a1-a5060eb11a3f","uploadToServer":true}
+# environment
+INVOCATION_ID = 6bb7bdf9654542a9aec7314e303f573e
+# environment
+GDK_PIXBUF_MODULEDIR = /snap/code/72/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders
+# default
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
+# environment
+LS_COLORS = 
+# environment
+XDG_SESSION_DESKTOP = ubuntu
+# environment
+SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
+# environment
+GIO_LAUNCHED_DESKTOP_FILE_PID = 11063
+# automatic
+%F = $(notdir $%)
+# environment
+DISPLAY = :0
+# environment
+VSCODE_PIPE_LOGGING = true
+# environment
+SNAP_INSTANCE_KEY = 
+# environment
+PWD = /home/flavio/Desktop/so_long
+# default
+.LOADED := 
+# environment
+SSH_AGENT_PID = 1183
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
+# environment
+GTK_MODULES = gail:atk-bridge
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/services/extensions/node/extensionHostProcess
+# environment
+HOME = /home/flavio
+# environment
+LESSCLOSE = /usr/bin/lesspipe %s %s
+# environment
+VSCODE_CLI = 1
+# environment
+VSCODE_CODE_CACHE_PATH = /home/flavio/.config/Code/CachedData/3866c3553be8b268c8a7f8c0482c0c0177aa8bfa
+# environment
+LOGNAME = flavio
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+# environment
+SNAP_LIBRARY_PATH = /var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd/void
+# environment
+SNAP_CONTEXT = Nmp7u0urzrCTh7uxopxgKZgi-ao1P2QBw22J6bDPM0i8mbMGXr-B
+# automatic
++F = $(notdir $+)
+# environment
+ELECTRON_NO_ATTACH_CONSOLE = 1
+# environment
+SNAP_USER_COMMON = /home/flavio/snap/code/common
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# environment
+GNOME_DESKTOP_SESSION_ID = this-is-deprecated
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# environment
+LC_TIME = pt_BR.UTF-8
+# environment
+SNAP_REAL_HOME = /home/flavio
+# default
+MAKE = $(MAKE_COMMAND)
+# default
+MAKECMDGOALS := all
+# environment
+QT_IM_MODULE = ibus
+# makefile (from 'Makefile', line 1)
+SRCS = ./src/main.c ./src/utils/ft_calloc.c ./src/utils/ft_strlen.c ./src/utils/get_next_line_utils.c ./src/utils/get_next_line.c ./src/utils/is_in.c ./src/utils/ft_substr.c ./src/utils/pixel_manipulation.c ./src/checks/check_map.c ./src/keyframe/game_init.c ./src/config/game_config.c ./src/config/map_config.c
+# environment
+SNAP_USER_DATA = /home/flavio/snap/code/72
+# environment
+SHLVL = 0
+# makefile (from 'Makefile', line 15)
+CC = clang
+# environment
+GNOME_SHELL_SESSION_MODE = ubuntu
+# environment
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-05e0f5ff-1741-40bd-98ba-85ee7b5e94ed.sock
+# default
+MAKE_VERSION := 4.2.1
+# environment
+USER = flavio
+# environment
+SNAP_REVISION = 72
+# environment
+LC_MONETARY = pt_BR.UTF-8
+# makefile
+.DEFAULT_GOAL := all
+# environment
+XDG_CURRENT_DESKTOP = Unity
+# makefile (from 'Makefile', line 10)
+NAME = so_long
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# environment
+LC_TELEPHONE = pt_BR.UTF-8
+# default
+MAKE_COMMAND := make
+# default
+.VARIABLES := 
+# automatic
+*F = $(notdir $*)
+# environment
+VSCODE_IPC_HOOK = /run/user/1000/vscode-105696e1-1.59.1-main.sock
+# environment
+BAMF_DESKTOP_FILE_HINT = /var/lib/snapd/desktop/applications/code_code.desktop
+# makefile
+MAKEFLAGS = pqrR
+# environment
+MFLAGS = -pqrR
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# environment
+BREAKPAD_DUMP_LOCATION = /home/flavio/.config/Code/exthost Crash Reports
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# environment
+GDK_BACKEND = x11
+# environment
+LC_PAPER = pt_BR.UTF-8
+# environment
+LC_IDENTIFICATION = pt_BR.UTF-8
+# environment
+QT_ACCESSIBILITY = 1
+# default
+MAKEFILES := 
+# environment
+SNAP_COOKIE = Nmp7u0urzrCTh7uxopxgKZgi-ao1P2QBw22J6bDPM0i8mbMGXr-B
+# environment
+LC_NUMERIC = pt_BR.UTF-8
+# environment
+VSCODE_BROWSER_CODE_LOADING = bypassHeatCheck
+# automatic
+<F = $(notdir $<)
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# environment
+LC_MEASUREMENT = pt_BR.UTF-8
+# environment
+SNAP_NAME = code
+# environment
+LC_ALL = C
+# environment
+GJS_DEBUG_TOPICS = JS ERROR;JS LOG
+# automatic
+^F = $(notdir $^)
+# default
+SUFFIXES := 
+# makefile (from 'Makefile', line 13)
+FLAGS = -ldl -Imlx -Lmlx -lmlx -lm -lbsd -lXext -lX11
+# environment
+SNAP_REEXEC = 
+# environment
+CHROME_DESKTOP = code-url-handler.desktop
+ 
+make: *** No rule to make target 'src/config/map_config.o', needed by 'so_long'.  Stop.
+ 
+# environment
+WINDOWPATH = 2
+# default
+.INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
+# environment
+GJS_DEBUG_OUTPUT = stderr
+# default
+.RECIPEPREFIX := 
+# environment
+LC_ADDRESS = pt_BR.UTF-8
+# environment
+LANG = C
+# environment
+VSCODE_PID = 11111
+# variable set hash-table stats:
+# Load=140/1024=14%, Rehash=0, Collisions=28/169=17%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# . (device 45826, inode 1199097): 11 files, no impossibilities.
+
+# 11 files, no impossibilities in 1 directories.
+
+# Implicit Rules
+
+# No implicit rules.
+
+# Files
+
+# Not a target:
+src/config/game_config.o:
+#  Implicit rule search has been done.
+#  Last modified 2021-08-23 13:36:25.737021326
+#  File has been updated.
+#  Successfully updated.
+
+all: so_long
+#  Command line target.
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has not been updated.
+
+# Not a target:
+src/main.o:
+#  Implicit rule search has been done.
+#  Last modified 2021-08-23 13:11:55.242032073
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/utils/pixel_manipulation.o:
+#  Implicit rule search has been done.
+#  Last modified 2021-08-23 13:36:25.597003813
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/utils/get_next_line.o:
+#  Implicit rule search has been done.
+#  Last modified 2021-08-23 11:04:46.954058252
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+#  Last modified 2021-08-23 13:36:47.571692483
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/utils/is_in.o:
+#  Implicit rule search has been done.
+#  Last modified 2021-08-23 11:04:47.134064756
+#  File has been updated.
+#  Successfully updated.
+
+.c.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 22):
+	${CC} ${CFLAGS} -Imlx -Ibass -c $< -o ${<:.c=.o}
+
+fclean: clean
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 32):
+	$(RM) $(NAME)
+
+# Not a target:
+src/utils/ft_strlen.o:
+#  Implicit rule search has been done.
+#  Last modified 2021-08-23 11:04:44.345964113
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/keyframe/game_init.o:
+#  Implicit rule search has been done.
+#  Last modified 2021-08-23 13:12:33.314336382
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+re: fclean all
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+clean:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 29):
+	$(RM) $(OBJS)
+
+so_long: src/main.o src/utils/ft_calloc.o src/utils/ft_strlen.o src/utils/get_next_line_utils.o src/utils/get_next_line.o src/utils/is_in.o src/utils/ft_substr.o src/utils/pixel_manipulation.o src/checks/check_map.o src/keyframe/game_init.o src/config/game_config.o src/config/map_config.o
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 25):
+	make -C mlx
+	${CC} $(CFLAGS) -o $(NAME) $(OBJS) $(FLAGS)
+
+# Not a target:
+src/config/map_config.o:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has not been updated.
+
+# Not a target:
+src/utils/get_next_line_utils.o:
+#  Implicit rule search has been done.
+#  Last modified 2021-08-23 11:04:46.71804973
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/checks/check_map.o:
+#  Implicit rule search has been done.
+#  Last modified 2021-08-23 13:11:55.402033321
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/utils/ft_calloc.o:
+#  Implicit rule search has been done.
+#  Last modified 2021-08-23 11:04:44.157957331
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/utils/ft_substr.o:
+#  Implicit rule search has been done.
+#  Last modified 2021-08-23 11:04:47.310071114
+#  File has been updated.
+#  Successfully updated.
+
+# files hash-table stats:
+# Load=21/1024=2%, Rehash=0, Collisions=2/49=4%
+# VPATH Search Paths
+
+# No 'vpath' search paths.
+
+# No general ('VPATH' variable) search path.
+
+# strcache buffers: 1 (0) / strings = 33 / storage = 432 B / avg = 13 B
+# current buf: size = 8162 B / used = 432 B / count = 33 / avg = 13 B
+
+# strcache performance: lookups = 48 / hit rate = 31%
+# hash-table stats:
+# Load=33/8192=0%, Rehash=0, Collisions=1/48=2%
+# Finished Make data base on Mon Aug 23 13:36:49 2021
+
+ 

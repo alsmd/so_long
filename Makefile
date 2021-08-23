@@ -1,10 +1,15 @@
-SRCS = ./src/main.c
+SRCS =	./src/main.c \
+		./src/utils/ft_calloc.c ./src/utils/ft_strlen.c ./src/utils/get_next_line_utils.c ./src/utils/get_next_line.c ./src/utils/is_in.c \
+		./src/utils/ft_substr.c ./src/utils/pixel_manipulation.c \
+		./src/checks/check_map.c \
+		./src/keyframe/game_init.c \
+		./src/config/game_config.c ./src/config/map_config.c
 
 OBJS = $(SRCS:.c=.o)
 
 NAME = so_long
 
-CFLAGS		= 
+CFLAGS		= -g
 FLAGS		= -ldl -Imlx -Lmlx -lmlx -lm -lbsd -lXext -lX11
 
 CC = clang

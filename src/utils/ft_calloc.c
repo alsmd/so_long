@@ -1,31 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/23 09:21:43 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/23 13:10:18 by flavio           ###   ########.fr       */
+/*   Created: 2021/07/28 19:43:55 by flavio            #+#    #+#             */
+/*   Updated: 2021/08/23 10:39:10 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/so_long.h"
+#include "../../includes/so_long.h"
 
-int	main(int argc, char *argv[])
+void	*ft_calloc(size_t nmemb, size_t size)
 {
-	t_game	game;
-	int		w;
-	
-	if (argc == 2)
+	void	*r;
+	int		index;
+
+	index = 0;
+	if (nmemb * size > INT_MAX)
 	{
-		if (check_map(argv[1], &game))
-			game_config(&game);
-		else
-			return (1);
-		game_init(&game);
+		errno = 12;
+		return (0);
 	}
-	else
-		return (1);
+	r = malloc(nmemb * size);
+	if (r)
+	{
+		while (index < nmemb * size)
+		{
+			((char *)r)[index] = 0;
+			index++;
+		}
+		return (r);
+	}
 	return (0);
 }

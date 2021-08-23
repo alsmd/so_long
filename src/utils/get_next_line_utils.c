@@ -1,31 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   get_next_line_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/23 09:21:43 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/23 13:10:18 by flavio           ###   ########.fr       */
+/*   Created: 2021/08/09 09:16:19 by flavio            #+#    #+#             */
+/*   Updated: 2021/08/23 10:46:36 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/so_long.h"
+#include "../../includes/so_long.h"
 
-int	main(int argc, char *argv[])
+void	ft_bzero(void *s, size_t n)
 {
-	t_game	game;
-	int		w;
-	
-	if (argc == 2)
-	{
-		if (check_map(argv[1], &game))
-			game_config(&game);
-		else
-			return (1);
-		game_init(&game);
-	}
-	else
-		return (1);
-	return (0);
+	while (n--)
+		((char *)s)[n] = 0;
 }
