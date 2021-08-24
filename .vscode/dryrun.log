@@ -1,9 +1,26 @@
-make --dry-run --keep-going --print-directory
+make --dry-run --always-make --keep-going --print-directory
 make: Entering directory '/home/flavio/Desktop/so_long'
+clang -g -Imlx -Ibass -c src/main.c -o src/main.o
+clang -g -Imlx -Ibass -c src/utils/ft_calloc.c -o src/utils/ft_calloc.o
+clang -g -Imlx -Ibass -c src/utils/ft_strlen.c -o src/utils/ft_strlen.o
+clang -g -Imlx -Ibass -c src/utils/get_next_line_utils.c -o src/utils/get_next_line_utils.o
+clang -g -Imlx -Ibass -c src/utils/get_next_line.c -o src/utils/get_next_line.o
+clang -g -Imlx -Ibass -c src/utils/is_in.c -o src/utils/is_in.o
+clang -g -Imlx -Ibass -c src/utils/ft_substr.c -o src/utils/ft_substr.o
+clang -g -Imlx -Ibass -c src/utils/pixel_manipulation.c -o src/utils/pixel_manipulation.o
+clang -g -Imlx -Ibass -c src/checks/check_map.c -o src/checks/check_map.o
+clang -g -Imlx -Ibass -c src/keyframe/game_init.c -o src/keyframe/game_init.o
+clang -g -Imlx -Ibass -c src/keyframe/frame_update.c -o src/keyframe/frame_update.o
+clang -g -Imlx -Ibass -c src/config/game_config.c -o src/config/game_config.o
+clang -g -Imlx -Ibass -c src/config/map_config.c -o src/config/map_config.o
+clang -g -Imlx -Ibass -c src/config/player_config.c -o src/config/player_config.o
 clang -g -Imlx -Ibass -c src/config/new_item.c -o src/config/new_item.o
 clang -g -Imlx -Ibass -c src/sprites/map_sprites.c -o src/sprites/map_sprites.o
+clang -g -Imlx -Ibass -c src/sprites/player_sprites.c -o src/sprites/player_sprites.o
 clang -g -Imlx -Ibass -c src/sprites/item_sprites.c -o src/sprites/item_sprites.o
+clang -g -Imlx -Ibass -c src/actions/player_action.c -o src/actions/player_action.o
+clang -g -Imlx -Ibass -c src/actions/key_hook.c -o src/actions/key_hook.o
 make -C mlx
-clang -g -o so_long ./src/main.o ./src/utils/ft_calloc.o ./src/utils/ft_strlen.o ./src/utils/get_next_line_utils.o ./src/utils/get_next_line.o ./src/utils/is_in.o ./src/utils/ft_substr.o ./src/utils/pixel_manipulation.o ./src/checks/check_map.o ./src/keyframe/game_init.o ./src/keyframe/frame_update.o ./src/config/game_config.o ./src/config/map_config.o ./src/config/player_config.o ./src/config/new_item.o ./src/sprites/map_sprites.o ./src/sprites/player_sprites.o ./src/sprites/item_sprites.o -ldl -Imlx -Lmlx -lmlx -lm -lbsd -lXext -lX11
+clang -g -o so_long ./src/main.o ./src/utils/ft_calloc.o ./src/utils/ft_strlen.o ./src/utils/get_next_line_utils.o ./src/utils/get_next_line.o ./src/utils/is_in.o ./src/utils/ft_substr.o ./src/utils/pixel_manipulation.o ./src/checks/check_map.o ./src/keyframe/game_init.o ./src/keyframe/frame_update.o ./src/config/game_config.o ./src/config/map_config.o ./src/config/player_config.o ./src/config/new_item.o ./src/sprites/map_sprites.o ./src/sprites/player_sprites.o ./src/sprites/item_sprites.o ./src/actions/player_action.o ./src/actions/key_hook.o -ldl -Imlx -Lmlx -lmlx -lm -lbsd -lXext -lX11
 make: Leaving directory '/home/flavio/Desktop/so_long'
  

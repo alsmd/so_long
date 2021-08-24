@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 09:21:04 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/24 09:59:31 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/24 10:47:17 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 /*INCLUDES*/
 #include "../mlx/mlx.h"
 #include "get_next_line.h"
+#include <X11/X.h>
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <fcntl.h>
@@ -95,6 +96,7 @@ typedef struct	s_game
 //General
 void	game_config(t_game *game);
 void	game_init(t_game *game);
+int		key_hook(int keycode, t_game *game);
 
 //Frames
 int		frame_update(t_game *game);
@@ -108,6 +110,7 @@ void	get_active_map(t_game *game);
 //PLAYER
 void	player_config(t_game *game);
 void	player_sprites(t_game *game);
+void	player_action(int keycode, t_game *game);
 
 //Item
 void	new_item(t_game *game, int x, int y);

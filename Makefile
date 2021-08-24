@@ -4,7 +4,8 @@ SRCS =	./src/main.c \
 		./src/checks/check_map.c \
 		./src/keyframe/game_init.c ./src/keyframe/frame_update.c \
 		./src/config/game_config.c ./src/config/map_config.c ./src/config/player_config.c ./src/config/new_item.c \
-		./src/sprites/map_sprites.c ./src/sprites/player_sprites.c ./src/sprites/item_sprites.c 
+		./src/sprites/map_sprites.c ./src/sprites/player_sprites.c ./src/sprites/item_sprites.c \
+		./src/actions/player_action.c ./src/actions/key_hook.c
 
 OBJS = $(SRCS:.c=.o)
 
