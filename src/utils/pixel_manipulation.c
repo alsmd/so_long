@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/20 16:15:47 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/23 13:32:47 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/23 19:09:11 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,8 @@ void	copy_img_from(t_data *dest, t_data *src, int x_src, int y_src, int width, i
 		while (y < height)
 		{
 			pixel = my_mlx_get_pixel(src, x_src, y_src);
-			my_mlx_pixel_put(dest, x, y, pixel);
+			if (pixel != 0  && pixel != -16777216)
+				my_mlx_pixel_put(dest, x, y, pixel);
 			y++;
 			y_src++;
 		}
@@ -70,7 +71,8 @@ void	copy_img_to(t_data *dest, t_data *src, int x_dest, int y_dest, int width, i
 		while (y < height)
 		{
 			pixel = my_mlx_get_pixel(src, x, y);
-			my_mlx_pixel_put(dest, x_dest, y_dest, pixel);
+			if (pixel != 0  && pixel != -16777216)
+				my_mlx_pixel_put(dest, x_dest, y_dest, pixel);
 			y++;
 			y_dest++;
 		}

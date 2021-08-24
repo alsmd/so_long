@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 09:21:04 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/23 13:37:02 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/24 09:03:48 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,8 @@ typedef struct s_player
 	int		x;
 	int		y;
 	int		steps;
+	int		w;
+	int		h;
 }	t_player;
 
 typedef struct s_item
@@ -101,5 +103,10 @@ void	copy_img_from(t_data *dest, t_data *src, int x_src, int y_src, int width, i
 void	copy_img_to(t_data *dest, t_data *src, int x_dest, int y_dest, int width, int height);
 void	clear_image(t_data *img, int width, int height, int color);
 void	map_config(t_game *game);
+int		frame_update(t_game *game);
+void	player_config(t_game *game);
+void	get_active_map(t_game *game);
+void	map_sprites(t_game *game);
+void	player_sprites(t_game *game);
 
 #endif

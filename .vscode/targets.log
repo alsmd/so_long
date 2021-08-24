@@ -1,4 +1,6 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+make: *** No rule to make target 'src/config/player_config.o', needed by 'so_long'.  Stop.
+ 
 # GNU Make 4.2.1
 # Built for x86_64-pc-linux-gnu
 # Copyright (C) 1988-2016 Free Software Foundation, Inc.
@@ -6,7 +8,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Mon Aug 23 13:36:49 2021
+# Make data base, printed on Tue Aug 24 09:05:54 2021
 
 # Variables
 
@@ -44,15 +46,17 @@ XMODIFIERS = @im=ibus
 CURDIR := /home/flavio/Desktop/so_long
 # makefile
 SHELL = /bin/sh
-# makefile (from 'Makefile', line 17)
+# makefile (from 'Makefile', line 18)
 RM = rm -f
 # environment
 SNAP_DATA = /var/snap/code/72
+ 
 # environment
+ 
 VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
 # environment
-JOURNAL_STREAM = 8:46123
-# makefile (from 'Makefile', line 12)
+JOURNAL_STREAM = 8:44220
+# makefile (from 'Makefile', line 13)
 CFLAGS = -g
 # environment
 XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
@@ -80,10 +84,10 @@ VSCODE_VERBOSE_LOGGING = true
 _ = /snap/code/72/usr/share/code/code
 # environment
 LC_CTYPE = pt_BR.UTF-8
-# makefile (from 'Makefile', line 8)
+# makefile (from 'Makefile', line 9)
 OBJS = $(SRCS:.c=.o)
 # environment
-MANAGERPID = 951
+MANAGERPID = 943
 # environment
 LESSOPEN = | /usr/bin/lesspipe %s
 # environment
@@ -99,7 +103,7 @@ PATH = /home/flavio/.local/bin:/home/flavio/.local/bin:/usr/local/sbin:/usr/loca
 # environment
 GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
-SESSION_MANAGER = local/flavio-S14BW01:@/tmp/.ICE-unix/1245,unix/flavio-S14BW01:/tmp/.ICE-unix/1245
+SESSION_MANAGER = local/flavio-S14BW01:@/tmp/.ICE-unix/1231,unix/flavio-S14BW01:/tmp/.ICE-unix/1231
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
@@ -117,7 +121,7 @@ DISABLE_WAYLAND = 1
 # environment
 VSCODE_CRASH_REPORTER_START_OPTIONS = {"companyName":"Microsoft","productName":"VSCode","submitURL":"appcenter://code?aid=fba07a4d-84bd-4fc8-a125-9640fc8ce171&uid=5b0aee19-f674-4b13-a8a1-a5060eb11a3f&iid=5b0aee19-f674-4b13-a8a1-a5060eb11a3f&sid=5b0aee19-f674-4b13-a8a1-a5060eb11a3f","uploadToServer":true}
 # environment
-INVOCATION_ID = 6bb7bdf9654542a9aec7314e303f573e
+INVOCATION_ID = 8402a3b6874a4f0592f75f5c8fc7ba4e
 # environment
 GDK_PIXBUF_MODULEDIR = /snap/code/72/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders
 # default
@@ -129,7 +133,7 @@ XDG_SESSION_DESKTOP = ubuntu
 # environment
 SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 11063
+GIO_LAUNCHED_DESKTOP_FILE_PID = 2965
 # automatic
 %F = $(notdir $%)
 # environment
@@ -143,7 +147,7 @@ PWD = /home/flavio/Desktop/so_long
 # default
 .LOADED := 
 # environment
-SSH_AGENT_PID = 1183
+SSH_AGENT_PID = 1167
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
 # environment
@@ -189,17 +193,17 @@ MAKECMDGOALS := all
 # environment
 QT_IM_MODULE = ibus
 # makefile (from 'Makefile', line 1)
-SRCS = ./src/main.c ./src/utils/ft_calloc.c ./src/utils/ft_strlen.c ./src/utils/get_next_line_utils.c ./src/utils/get_next_line.c ./src/utils/is_in.c ./src/utils/ft_substr.c ./src/utils/pixel_manipulation.c ./src/checks/check_map.c ./src/keyframe/game_init.c ./src/config/game_config.c ./src/config/map_config.c
+SRCS = ./src/main.c ./src/utils/ft_calloc.c ./src/utils/ft_strlen.c ./src/utils/get_next_line_utils.c ./src/utils/get_next_line.c ./src/utils/is_in.c ./src/utils/ft_substr.c ./src/utils/pixel_manipulation.c ./src/checks/check_map.c ./src/keyframe/game_init.c ./src/keyframe/frame_update.c ./src/config/game_config.c ./src/config/map_config.c ./src/config/player_config.c ./src/sprites/map_sprites.c ./src/sprites/player_sprites.c
 # environment
 SNAP_USER_DATA = /home/flavio/snap/code/72
 # environment
 SHLVL = 0
-# makefile (from 'Makefile', line 15)
+# makefile (from 'Makefile', line 16)
 CC = clang
 # environment
 GNOME_SHELL_SESSION_MODE = ubuntu
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-05e0f5ff-1741-40bd-98ba-85ee7b5e94ed.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-d35021c3-873b-4c47-8ac2-a9a6a5e27883.sock
 # default
 MAKE_VERSION := 4.2.1
 # environment
@@ -212,7 +216,7 @@ LC_MONETARY = pt_BR.UTF-8
 .DEFAULT_GOAL := all
 # environment
 XDG_CURRENT_DESKTOP = Unity
-# makefile (from 'Makefile', line 10)
+# makefile (from 'Makefile', line 11)
 NAME = so_long
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
@@ -270,15 +274,12 @@ GJS_DEBUG_TOPICS = JS ERROR;JS LOG
 ^F = $(notdir $^)
 # default
 SUFFIXES := 
-# makefile (from 'Makefile', line 13)
+# makefile (from 'Makefile', line 14)
 FLAGS = -ldl -Imlx -Lmlx -lmlx -lm -lbsd -lXext -lX11
 # environment
 SNAP_REEXEC = 
 # environment
 CHROME_DESKTOP = code-url-handler.desktop
- 
-make: *** No rule to make target 'src/config/map_config.o', needed by 'so_long'.  Stop.
- 
 # environment
 WINDOWPATH = 2
 # default
@@ -292,7 +293,7 @@ LC_ADDRESS = pt_BR.UTF-8
 # environment
 LANG = C
 # environment
-VSCODE_PID = 11111
+VSCODE_PID = 3011
 # variable set hash-table stats:
 # Load=140/1024=14%, Rehash=0, Collisions=28/169=17%
 
@@ -302,9 +303,9 @@ VSCODE_PID = 11111
 
 # Directories
 
-# . (device 45826, inode 1199097): 11 files, no impossibilities.
+# . (device 45826, inode 1199097): 15 files, no impossibilities.
 
-# 11 files, no impossibilities in 1 directories.
+# 15 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -313,11 +314,25 @@ VSCODE_PID = 11111
 # Files
 
 # Not a target:
-src/config/game_config.o:
+src/keyframe/frame_update.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-23 13:36:25.737021326
+#  Last modified 2021-08-23 19:16:37.831372988
 #  File has been updated.
 #  Successfully updated.
+
+# Not a target:
+src/config/game_config.o:
+#  Implicit rule search has been done.
+#  Last modified 2021-08-24 09:05:42.082465216
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/sprites/map_sprites.o:
+#  Implicit rule search has not been done.
+ 
+#  Modification time never checked.
+#  File has not been updated.
 
 all: so_long
 #  Command line target.
@@ -328,35 +343,35 @@ all: so_long
 # Not a target:
 src/main.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-23 13:11:55.242032073
+#  Last modified 2021-08-23 19:13:58.66263299
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 src/utils/pixel_manipulation.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-23 13:36:25.597003813
+#  Last modified 2021-08-23 19:13:59.610660484
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 src/utils/get_next_line.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-23 11:04:46.954058252
+#  Last modified 2021-08-23 19:13:59.194648418
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-23 13:36:47.571692483
+#  Last modified 2021-08-24 09:05:29.594003178
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 src/utils/is_in.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-23 11:04:47.134064756
+#  Last modified 2021-08-23 19:13:59.334652478
 #  File has been updated.
 #  Successfully updated.
 
@@ -364,27 +379,34 @@ src/utils/is_in.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 22):
+#  recipe to execute (from 'Makefile', line 23):
 	${CC} ${CFLAGS} -Imlx -Ibass -c $< -o ${<:.c=.o}
 
+ 
 fclean: clean
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 32):
+#  recipe to execute (from 'Makefile', line 33):
 	$(RM) $(NAME)
 
 # Not a target:
 src/utils/ft_strlen.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-23 11:04:44.345964113
+#  Last modified 2021-08-23 19:13:58.922640529
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
+src/config/player_config.o:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has not been updated.
+
+# Not a target:
 src/keyframe/game_init.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-23 13:12:33.314336382
+#  Last modified 2021-08-23 19:13:59.882668373
 #  File has been updated.
 #  Successfully updated.
 
@@ -403,65 +425,72 @@ clean:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 29):
+#  recipe to execute (from 'Makefile', line 30):
 	$(RM) $(OBJS)
 
-so_long: src/main.o src/utils/ft_calloc.o src/utils/ft_strlen.o src/utils/get_next_line_utils.o src/utils/get_next_line.o src/utils/is_in.o src/utils/ft_substr.o src/utils/pixel_manipulation.o src/checks/check_map.o src/keyframe/game_init.o src/config/game_config.o src/config/map_config.o
+# Not a target:
+src/sprites/player_sprites.o:
 #  Implicit rule search has not been done.
-#  File does not exist.
+#  Modification time never checked.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 25):
+
+so_long: src/main.o src/utils/ft_calloc.o src/utils/ft_strlen.o src/utils/get_next_line_utils.o src/utils/get_next_line.o src/utils/is_in.o src/utils/ft_substr.o src/utils/pixel_manipulation.o src/checks/check_map.o src/keyframe/game_init.o src/keyframe/frame_update.o src/config/game_config.o src/config/map_config.o src/config/player_config.o src/sprites/map_sprites.o src/sprites/player_sprites.o
+#  Implicit rule search has not been done.
+#  Last modified 2021-08-23 19:16:38.107381402
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 26):
 	make -C mlx
 	${CC} $(CFLAGS) -o $(NAME) $(OBJS) $(FLAGS)
 
 # Not a target:
 src/config/map_config.o:
 #  Implicit rule search has been done.
-#  File does not exist.
-#  File has not been updated.
+#  Last modified 2021-08-24 09:05:42.238470972
+#  File has been updated.
+#  Successfully updated.
 
 # Not a target:
 src/utils/get_next_line_utils.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-23 11:04:46.71804973
+#  Last modified 2021-08-23 19:13:59.050644241
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 src/checks/check_map.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-23 13:11:55.402033321
+#  Last modified 2021-08-23 19:13:59.750664545
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 src/utils/ft_calloc.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-23 11:04:44.157957331
+#  Last modified 2021-08-23 19:13:58.798636933
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 src/utils/ft_substr.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-23 11:04:47.310071114
+#  Last modified 2021-08-23 19:13:59.466656307
 #  File has been updated.
 #  Successfully updated.
 
 # files hash-table stats:
-# Load=21/1024=2%, Rehash=0, Collisions=2/49=4%
+# Load=25/1024=2%, Rehash=0, Collisions=2/57=4%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 33 / storage = 432 B / avg = 13 B
-# current buf: size = 8162 B / used = 432 B / count = 33 / avg = 13 B
+# strcache buffers: 1 (0) / strings = 40 / storage = 571 B / avg = 14 B
+# current buf: size = 8162 B / used = 571 B / count = 40 / avg = 14 B
 
-# strcache performance: lookups = 48 / hit rate = 31%
+# strcache performance: lookups = 56 / hit rate = 28%
 # hash-table stats:
-# Load=33/8192=0%, Rehash=0, Collisions=1/48=2%
-# Finished Make data base on Mon Aug 23 13:36:49 2021
+# Load=40/8192=0%, Rehash=0, Collisions=1/56=2%
+# Finished Make data base on Tue Aug 24 09:05:54 2021
 
  
