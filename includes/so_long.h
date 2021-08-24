@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 09:21:04 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/24 10:47:17 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/24 11:27:52 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,6 +75,8 @@ typedef struct s_item
 	t_data	sprites[4];
 	int				x;
 	int				y;
+	float			frame;
+	int				going_up;
 	struct s_item	*next;
 }	t_item;
 

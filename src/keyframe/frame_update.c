@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 18:17:03 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/24 11:13:46 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/24 11:36:54 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,25 +21,45 @@ void	render_user(t_game *game)
 				game->player.h);
 }
 
+void	key_animation(t_item *item)
+{
+	if (item->going_up)
+	{
+		if (item->frame <= 0)
+			item->going_up = 0;
+		else
+			item->frame -= .6;
+	}
+	else
+	{
+		if (item->frame > 7)
+			item->going_up = 1;
+		else
+			item->frame += .6;
+	}
+}
+
 void	render_items(t_game *game)
 {
-	t_item	*begin;
+	t_item	*item;
 	int		is_on_map;
 
 
-	begin = game->items;
-	while (begin)
+	item = game->items;
+	while (item)
 	{
-		is_on_map = ((game->map.x + begin->x) * BLOCK_SIZE) < game->width;
+		is_on_map = ((game->map.x + item->x) * BLOCK_SIZE) < game->width;
 		is_on_map = is_on_map && \
-				((game->map.y + begin->y) * BLOCK_SIZE) < game->height;
+				((game->map.y + item->y) * BLOCK_SIZE) < game->height;
 		if (is_on_map)
 		{
-			copy_img_to(&game->map.map, &begin->sprites[0],
-				(begin->x - game->map.x) * BLOCK_SIZE,
-				(begin->y - game->map.y) * BLOCK_SIZE, BLOCK_SIZE, BLOCK_SIZE);
+			copy_img_to(&game->map.map, &item->sprites[0],
+				(item->x - game->map.x) * BLOCK_SIZE,
+				(item->y - game->map.y) * BLOCK_SIZE + item->frame, BLOCK_SIZE, BLOCK_SIZE);
+			key_animation(item);
+
 		}
-		begin = begin->next;
+		item = item->next;
 	}
 }
 int	frame_update(t_game *game)
