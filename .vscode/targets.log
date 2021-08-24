@@ -1,14 +1,22 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
-make: *** No rule to make target 'src/config/player_config.o', needed by 'so_long'.  Stop.
+make: *** No rule to make target 'src/config/new_item.o', needed by 'so_long'.  Stop.
  
 # GNU Make 4.2.1
+ 
 # Built for x86_64-pc-linux-gnu
+ 
 # Copyright (C) 1988-2016 Free Software Foundation, Inc.
+ 
 # License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+ 
 # This is free software: you are free to change and redistribute it.
+ 
 # There is NO WARRANTY, to the extent permitted by law.
+ 
 
-# Make data base, printed on Tue Aug 24 09:05:54 2021
+ 
+# Make data base, printed on Tue Aug 24 09:58:57 2021
+ 
 
 # Variables
 
@@ -50,9 +58,7 @@ SHELL = /bin/sh
 RM = rm -f
 # environment
 SNAP_DATA = /var/snap/code/72
- 
 # environment
- 
 VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
 # environment
 JOURNAL_STREAM = 8:44220
@@ -120,6 +126,7 @@ VSCODE_LOG_STACK = false
 DISABLE_WAYLAND = 1
 # environment
 VSCODE_CRASH_REPORTER_START_OPTIONS = {"companyName":"Microsoft","productName":"VSCode","submitURL":"appcenter://code?aid=fba07a4d-84bd-4fc8-a125-9640fc8ce171&uid=5b0aee19-f674-4b13-a8a1-a5060eb11a3f&iid=5b0aee19-f674-4b13-a8a1-a5060eb11a3f&sid=5b0aee19-f674-4b13-a8a1-a5060eb11a3f","uploadToServer":true}
+ 
 # environment
 INVOCATION_ID = 8402a3b6874a4f0592f75f5c8fc7ba4e
 # environment
@@ -133,7 +140,7 @@ XDG_SESSION_DESKTOP = ubuntu
 # environment
 SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 2965
+GIO_LAUNCHED_DESKTOP_FILE_PID = 10878
 # automatic
 %F = $(notdir $%)
 # environment
@@ -193,7 +200,7 @@ MAKECMDGOALS := all
 # environment
 QT_IM_MODULE = ibus
 # makefile (from 'Makefile', line 1)
-SRCS = ./src/main.c ./src/utils/ft_calloc.c ./src/utils/ft_strlen.c ./src/utils/get_next_line_utils.c ./src/utils/get_next_line.c ./src/utils/is_in.c ./src/utils/ft_substr.c ./src/utils/pixel_manipulation.c ./src/checks/check_map.c ./src/keyframe/game_init.c ./src/keyframe/frame_update.c ./src/config/game_config.c ./src/config/map_config.c ./src/config/player_config.c ./src/sprites/map_sprites.c ./src/sprites/player_sprites.c
+SRCS = ./src/main.c ./src/utils/ft_calloc.c ./src/utils/ft_strlen.c ./src/utils/get_next_line_utils.c ./src/utils/get_next_line.c ./src/utils/is_in.c ./src/utils/ft_substr.c ./src/utils/pixel_manipulation.c ./src/checks/check_map.c ./src/keyframe/game_init.c ./src/keyframe/frame_update.c ./src/config/game_config.c ./src/config/map_config.c ./src/config/player_config.c ./src/config/new_item.c ./src/sprites/map_sprites.c ./src/sprites/player_sprites.c ./src/sprites/item_sprites.c 
 # environment
 SNAP_USER_DATA = /home/flavio/snap/code/72
 # environment
@@ -203,7 +210,7 @@ CC = clang
 # environment
 GNOME_SHELL_SESSION_MODE = ubuntu
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-d35021c3-873b-4c47-8ac2-a9a6a5e27883.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-b105dbe7-f7ca-49a3-ab6b-ea305de4d64d.sock
 # default
 MAKE_VERSION := 4.2.1
 # environment
@@ -229,6 +236,7 @@ MAKE_COMMAND := make
 # automatic
 *F = $(notdir $*)
 # environment
+ 
 VSCODE_IPC_HOOK = /run/user/1000/vscode-105696e1-1.59.1-main.sock
 # environment
 BAMF_DESKTOP_FILE_HINT = /var/lib/snapd/desktop/applications/code_code.desktop
@@ -293,7 +301,7 @@ LC_ADDRESS = pt_BR.UTF-8
 # environment
 LANG = C
 # environment
-VSCODE_PID = 3011
+VSCODE_PID = 10924
 # variable set hash-table stats:
 # Load=140/1024=14%, Rehash=0, Collisions=28/169=17%
 
@@ -323,14 +331,13 @@ src/keyframe/frame_update.o:
 # Not a target:
 src/config/game_config.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-24 09:05:42.082465216
+#  Last modified 2021-08-24 09:26:52.330520974
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 src/sprites/map_sprites.o:
 #  Implicit rule search has not been done.
- 
 #  Modification time never checked.
 #  File has not been updated.
 
@@ -343,7 +350,7 @@ all: so_long
 # Not a target:
 src/main.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-23 19:13:58.66263299
+#  Last modified 2021-08-24 09:13:54.371265478
 #  File has been updated.
 #  Successfully updated.
 
@@ -364,7 +371,7 @@ src/utils/get_next_line.o:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-24 09:05:29.594003178
+#  Last modified 2021-08-24 09:58:52.591546709
 #  File has been updated.
 #  Successfully updated.
 
@@ -382,7 +389,6 @@ src/utils/is_in.o:
 #  recipe to execute (from 'Makefile', line 23):
 	${CC} ${CFLAGS} -Imlx -Ibass -c $< -o ${<:.c=.o}
 
- 
 fclean: clean
 #  Implicit rule search has not been done.
 #  Modification time never checked.
@@ -400,8 +406,9 @@ src/utils/ft_strlen.o:
 # Not a target:
 src/config/player_config.o:
 #  Implicit rule search has been done.
-#  File does not exist.
-#  File has not been updated.
+#  Last modified 2021-08-24 09:06:17.703770301
+#  File has been updated.
+#  Successfully updated.
 
 # Not a target:
 src/keyframe/game_init.o:
@@ -411,9 +418,21 @@ src/keyframe/game_init.o:
 #  Successfully updated.
 
 # Not a target:
+src/sprites/item_sprites.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
 .DEFAULT:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+src/config/new_item.o:
+#  Implicit rule search has been done.
+#  File does not exist.
 #  File has not been updated.
 
 re: fclean all
@@ -434,9 +453,9 @@ src/sprites/player_sprites.o:
 #  Modification time never checked.
 #  File has not been updated.
 
-so_long: src/main.o src/utils/ft_calloc.o src/utils/ft_strlen.o src/utils/get_next_line_utils.o src/utils/get_next_line.o src/utils/is_in.o src/utils/ft_substr.o src/utils/pixel_manipulation.o src/checks/check_map.o src/keyframe/game_init.o src/keyframe/frame_update.o src/config/game_config.o src/config/map_config.o src/config/player_config.o src/sprites/map_sprites.o src/sprites/player_sprites.o
+so_long: src/main.o src/utils/ft_calloc.o src/utils/ft_strlen.o src/utils/get_next_line_utils.o src/utils/get_next_line.o src/utils/is_in.o src/utils/ft_substr.o src/utils/pixel_manipulation.o src/checks/check_map.o src/keyframe/game_init.o src/keyframe/frame_update.o src/config/game_config.o src/config/map_config.o src/config/player_config.o src/config/new_item.o src/sprites/map_sprites.o src/sprites/player_sprites.o src/sprites/item_sprites.o
 #  Implicit rule search has not been done.
-#  Last modified 2021-08-23 19:16:38.107381402
+#  Last modified 2021-08-24 09:42:47.113824512
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 26):
 	make -C mlx
@@ -445,7 +464,7 @@ so_long: src/main.o src/utils/ft_calloc.o src/utils/ft_strlen.o src/utils/get_ne
 # Not a target:
 src/config/map_config.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-24 09:05:42.238470972
+#  Last modified 2021-08-24 09:17:19.793754087
 #  File has been updated.
 #  Successfully updated.
 
@@ -459,7 +478,7 @@ src/utils/get_next_line_utils.o:
 # Not a target:
 src/checks/check_map.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-23 19:13:59.750664545
+#  Last modified 2021-08-24 09:26:52.19052833
 #  File has been updated.
 #  Successfully updated.
 
@@ -478,19 +497,19 @@ src/utils/ft_substr.o:
 #  Successfully updated.
 
 # files hash-table stats:
-# Load=25/1024=2%, Rehash=0, Collisions=2/57=4%
+# Load=27/1024=3%, Rehash=0, Collisions=2/61=3%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 40 / storage = 571 B / avg = 14 B
-# current buf: size = 8162 B / used = 571 B / count = 40 / avg = 14 B
+# strcache buffers: 1 (0) / strings = 42 / storage = 620 B / avg = 14 B
+# current buf: size = 8162 B / used = 620 B / count = 42 / avg = 14 B
 
-# strcache performance: lookups = 56 / hit rate = 28%
+# strcache performance: lookups = 58 / hit rate = 27%
 # hash-table stats:
-# Load=40/8192=0%, Rehash=0, Collisions=1/56=2%
-# Finished Make data base on Tue Aug 24 09:05:54 2021
+# Load=42/8192=1%, Rehash=0, Collisions=1/58=2%
+# Finished Make data base on Tue Aug 24 09:58:57 2021
 
  

@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/24 08:36:24 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/24 09:08:24 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/24 10:00:41 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ static void	get_tile(char c, t_data *tile, t_game *game)
 	if (c == 'P')
 		path = "./imgs/floor1.xpm";
 	if (c == 'C')
-		path = "./imgs/item.xpm";
+		path = "./imgs/floor1.xpm";
 	tile->img = mlx_xpm_file_to_image(game->vars.mlx, path, &size, &size);
 	tile->addr = mlx_get_data_addr(tile->img, &tile->bits_per_pixel,
 				&tile->line_length, &tile->endin);
@@ -68,6 +68,8 @@ void	map_sprites(t_game *game)
 				game->player.x = x;
 				game->player.y = y;
 			}
+			if (game->map.layout[y][x] == 'C')
+				new_item(game, x, y);
 			get_tile(game->map.layout[y][x], &tile, game);
 			copy_img_to(&game->map.full_map, &tile, x * BLOCK_SIZE,
 					y * BLOCK_SIZE, BLOCK_SIZE, BLOCK_SIZE);

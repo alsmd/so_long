@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 13:04:32 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/24 09:26:48 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/24 10:06:23 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,5 @@ void	game_config(t_game *game)
 	if (game->height > 600)
 		game->height = 600;
 	game->vars.win = mlx_new_window(game->vars.mlx, game->width, game->height, "so_long");
-	get_active_map(game);
 	player_config(game);
 }
