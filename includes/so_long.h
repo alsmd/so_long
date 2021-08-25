@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 09:21:04 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/24 11:27:52 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/24 11:54:42 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,8 @@ typedef struct s_map
 	t_data	map;
 	int		x;
 	int		y;
+	int		w;
+	int		h;
 }	t_map;
 
 typedef struct s_player

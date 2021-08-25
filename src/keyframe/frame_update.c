@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 18:17:03 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/24 11:36:54 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/25 18:08:26 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,19 +43,22 @@ void	render_items(t_game *game)
 {
 	t_item	*item;
 	int		is_on_map;
+	int		x;
+	int		y;
 
 
 	item = game->items;
 	while (item)
 	{
-		is_on_map = ((game->map.x + item->x) * BLOCK_SIZE) < game->width;
+		is_on_map = (game->map.x + item->x) < game->width;
 		is_on_map = is_on_map && \
-				((game->map.y + item->y) * BLOCK_SIZE) < game->height;
+				((game->map.y + item->y)) < game->height;
 		if (is_on_map)
 		{
-			copy_img_to(&game->map.map, &item->sprites[0],
-				(item->x - game->map.x) * BLOCK_SIZE,
-				(item->y - game->map.y) * BLOCK_SIZE + item->frame, BLOCK_SIZE, BLOCK_SIZE);
+			x = (item->x - game->map.x) * BLOCK_SIZE;
+			y = (item->y - game->map.y) * BLOCK_SIZE + item->frame;
+			//if (x && y)
+			//	copy_img_to(&game->map.map, &item->sprites[0], x, y, BLOCK_SIZE, BLOCK_SIZE);
 			key_animation(item);
 
 		}

@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/24 08:36:24 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/24 10:00:41 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/25 17:58:04 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,12 +36,17 @@ static void	get_tile(char c, t_data *tile, t_game *game)
 
 void	get_active_map(t_game *game)
 {
-	game->map.map.img = mlx_new_image(game->vars.mlx, game->width, game->height);
-	game->map.map.addr = mlx_get_data_addr(game->map.map.img,
+	if (!game->map.map.img)
+	{
+		game->map.map.img = mlx_new_image(game->vars.mlx, game->width * BLOCK_SIZE,
+						game->height * BLOCK_SIZE);
+		game->map.map.addr = mlx_get_data_addr(game->map.map.img,
 						&game->map.map.bits_per_pixel,
 						&game->map.map.line_length, &game->map.map.endin);
-	copy_img_from(&game->map.map, &game->map.full_map, game->map.x, game->map.y,
-				game->width, game->height);
+	}
+	copy_img_from(&game->map.map, &game->map.full_map, game->map.x * BLOCK_SIZE
+					, game->map.y * BLOCK_SIZE,
+					game->width * BLOCK_SIZE, game->height * BLOCK_SIZE);
 }
 
 void	map_sprites(t_game *game)
@@ -52,10 +57,12 @@ void	map_sprites(t_game *game)
 	int		y;
 
 
-	x = game->width / BLOCK_SIZE;
+	x = game->width;
 	x_holder = x;
-	y = game->height / BLOCK_SIZE;
-	game->map.full_map.img = mlx_new_image(game->vars.mlx, game->width, game->height);
+	y = game->height;
+	game->map.full_map.img = mlx_new_image(game->vars.mlx,
+							game->width * BLOCK_SIZE,
+							game->height * BLOCK_SIZE);
 	game->map.full_map.addr = mlx_get_data_addr(game->map.full_map.img,
 							&game->map.full_map.bits_per_pixel,
 							&game->map.full_map.line_length, &game->map.full_map.endin);	
@@ -76,4 +83,5 @@ void	map_sprites(t_game *game)
 		}
 		x = x_holder;
 	}
+	
 }

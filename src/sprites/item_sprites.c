@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/24 09:53:47 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/24 10:07:14 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/24 13:02:53 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ void	item_sprites(t_item *item, t_game *game)
 	int		w;
 	int		h;
 
-	w = 64;
-	h = 64;
+	w = BLOCK_SIZE;
+	h = BLOCK_SIZE;
 	full_sprite.img = mlx_xpm_file_to_image(game->vars.mlx, "./imgs/item.xpm", &w, &h);
 	full_sprite.addr = mlx_get_data_addr(full_sprite.img,
 						&full_sprite.bits_per_pixel, &full_sprite.line_length,

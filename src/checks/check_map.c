@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 09:48:10 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/24 09:24:58 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/24 12:55:58 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,7 +101,9 @@ int	check_map(char	*map_path, t_game *game)
 	}
 	close(fd);
 	make_layout(game, x, y, file);
-	game->width = x * BLOCK_SIZE;
-	game->height = y * BLOCK_SIZE;
+	game->map.w = x;
+	game->map.h = y;
+	game->width = x;
+	game->height = y;
 	return (1);
 }
