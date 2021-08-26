@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/24 10:32:47 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/26 09:43:56 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/26 15:22:31 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	player_action(int keycode, t_game *game)
 	vel = 1;
 	if (keycode == W)
 	{
-		if (game->map.y > 0 && game->player.y < (game->height) / 2)
+		if (game->map.y > 0 && game->player.y < (game->height) / 2 && game->map.layout[game->player.y + game->map.y - 1][game->player.x + game->map.x] != '1')
 			game->map.y -= vel;
 		else if (game->map.layout[game->player.y + game->map.y - 1][game->player.x + game->map.x] != '1')
 			game->player.y -= vel;
@@ -27,7 +27,7 @@ void	player_action(int keycode, t_game *game)
 	}
 	if (keycode == A)
 	{
-		if (game->map.x > 0  && game->player.x < (game->width) / 2)
+		if (game->map.x > 0  && game->player.x < (game->width) / 2 && game->map.layout[game->player.y + game->map.y][game->player.x + game->map.x - 1] != '1')
 			game->map.x -= vel;
 		else if (game->map.layout[game->player.y + game->map.y][game->player.x + game->map.x - 1] != '1')
 			game->player.x -= vel;
@@ -36,7 +36,7 @@ void	player_action(int keycode, t_game *game)
 	}
 	if (keycode == S)
 	{
-		if (game->map.y < game->map.h - game->height && game->player.y > (game->height) / 2)
+		if (game->map.y < game->map.h - game->height && game->player.y > (game->height) / 2 && game->map.layout[game->player.y + game->map.y + 1][game->player.x + game->map.x] != '1')
 			game->map.y += vel;
 		else if (game->map.layout[game->player.y + game->map.y + 1][game->player.x + game->map.x] != '1')
 			game->player.y += vel;
@@ -44,7 +44,7 @@ void	player_action(int keycode, t_game *game)
 	}
 	if (keycode == D)
 	{
-		if ((game->map.x < game->map.w - game->width) && game->player.x > (game->width) / 2)
+		if ((game->map.x < game->map.w - game->width) && game->player.x > (game->width) / 2 && game->map.layout[game->player.y + game->map.y][game->player.x + game->map.x + 1] != '1')
 			game->map.x += vel;
 		else if (game->map.layout[game->player.y + game->map.y][game->player.x + game->map.x + 1] != '1')
 			game->player.x += vel;
