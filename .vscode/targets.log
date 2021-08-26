@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Wed Aug 25 17:55:30 2021
+# Make data base, printed on Thu Aug 26 14:32:36 2021
 
 # Variables
 
@@ -51,7 +51,7 @@ SNAP_DATA = /var/snap/code/72
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
 # environment
-JOURNAL_STREAM = 8:45439
+JOURNAL_STREAM = 8:44390
 # makefile (from 'Makefile', line 14)
 CFLAGS = -g
 # environment
@@ -83,7 +83,7 @@ LC_CTYPE = pt_BR.UTF-8
 # makefile (from 'Makefile', line 10)
 OBJS = $(SRCS:.c=.o)
 # environment
-MANAGERPID = 952
+MANAGERPID = 967
 # environment
 LESSOPEN = | /usr/bin/lesspipe %s
 # environment
@@ -99,7 +99,7 @@ PATH = /home/flavio/.local/bin:/home/flavio/.local/bin:/usr/local/sbin:/usr/loca
 # environment
 GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
-SESSION_MANAGER = local/flavio-S14BW01:@/tmp/.ICE-unix/1265,unix/flavio-S14BW01:/tmp/.ICE-unix/1265
+SESSION_MANAGER = local/flavio-S14BW01:@/tmp/.ICE-unix/1261,unix/flavio-S14BW01:/tmp/.ICE-unix/1261
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
@@ -117,20 +117,19 @@ DISABLE_WAYLAND = 1
 # environment
 VSCODE_CRASH_REPORTER_START_OPTIONS = {"companyName":"Microsoft","productName":"VSCode","submitURL":"appcenter://code?aid=fba07a4d-84bd-4fc8-a125-9640fc8ce171&uid=5b0aee19-f674-4b13-a8a1-a5060eb11a3f&iid=5b0aee19-f674-4b13-a8a1-a5060eb11a3f&sid=5b0aee19-f674-4b13-a8a1-a5060eb11a3f","uploadToServer":true}
 # environment
-INVOCATION_ID = c956ba2e0cf2453099873cc6aee5fe08
+INVOCATION_ID = adfc5b2134e040c996c3fc8569c5f59d
 # environment
 GDK_PIXBUF_MODULEDIR = /snap/code/72/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
 LS_COLORS = 
- 
 # environment
 XDG_SESSION_DESKTOP = ubuntu
 # environment
 SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 1762
+GIO_LAUNCHED_DESKTOP_FILE_PID = 13457
 # automatic
 %F = $(notdir $%)
 # environment
@@ -144,7 +143,7 @@ PWD = /home/flavio/Desktop/so_long
 # default
 .LOADED := 
 # environment
-SSH_AGENT_PID = 1185
+SSH_AGENT_PID = 1212
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
 # environment
@@ -200,7 +199,7 @@ CC = clang
 # environment
 GNOME_SHELL_SESSION_MODE = ubuntu
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-d27cbf57-5d7e-4ddd-a723-94d57428e9e1.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-99451156-a9e4-49b9-8656-4a4708f7203c.sock
 # default
 MAKE_VERSION := 4.2.1
 # environment
@@ -279,6 +278,7 @@ SNAP_REEXEC =
 CHROME_DESKTOP = code-url-handler.desktop
 # environment
 WINDOWPATH = 2
+ 
 # default
 .INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
 # environment
@@ -290,7 +290,7 @@ LC_ADDRESS = pt_BR.UTF-8
 # environment
 LANG = C
 # environment
-VSCODE_PID = 1812
+VSCODE_PID = 13505
 # variable set hash-table stats:
 # Load=140/1024=14%, Rehash=0, Collisions=28/169=17%
 
@@ -313,7 +313,7 @@ VSCODE_PID = 1812
 # Not a target:
 src/keyframe/frame_update.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-24 13:48:14.087356812
+#  Last modified 2021-08-26 09:42:39.956885121
 #  File has been updated.
 #  Successfully updated.
 
@@ -327,7 +327,7 @@ src/config/game_config.o:
 # Not a target:
 src/sprites/map_sprites.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-24 13:47:28.725922512
+#  Last modified 2021-08-25 17:58:56.569094037
 #  File has been updated.
 #  Successfully updated.
 
@@ -341,7 +341,7 @@ all: so_long
 # Not a target:
 src/actions/player_action.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-24 16:26:33.384291769
+#  Last modified 2021-08-26 14:25:14.94474364
 #  File has been updated.
 #  Successfully updated.
 
@@ -404,7 +404,6 @@ fclean: clean
 # Not a target:
 src/utils/ft_strlen.o:
 #  Implicit rule search has been done.
- 
 #  Last modified 2021-08-24 13:47:26.753652765
 #  File has been updated.
 #  Successfully updated.
@@ -464,7 +463,7 @@ src/sprites/player_sprites.o:
 
 so_long: src/main.o src/utils/ft_calloc.o src/utils/ft_strlen.o src/utils/get_next_line_utils.o src/utils/get_next_line.o src/utils/is_in.o src/utils/ft_substr.o src/utils/pixel_manipulation.o src/checks/check_map.o src/keyframe/game_init.o src/keyframe/frame_update.o src/config/game_config.o src/config/map_config.o src/config/player_config.o src/config/new_item.o src/sprites/map_sprites.o src/sprites/player_sprites.o src/sprites/item_sprites.o src/actions/player_action.o src/actions/key_hook.o
 #  Implicit rule search has not been done.
-#  Last modified 2021-08-24 16:26:33.712381138
+#  Last modified 2021-08-26 14:25:15.344741524
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 27):
@@ -474,7 +473,7 @@ so_long: src/main.o src/utils/ft_calloc.o src/utils/ft_strlen.o src/utils/get_ne
 # Not a target:
 src/config/map_config.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-24 13:47:28.265859903
+#  Last modified 2021-08-25 17:58:56.369048232
 #  File has been updated.
 #  Successfully updated.
 
@@ -507,6 +506,7 @@ src/utils/ft_substr.o:
 #  Successfully updated.
 
 # files hash-table stats:
+ 
 # Load=29/1024=3%, Rehash=0, Collisions=2/65=3%
 # VPATH Search Paths
 
@@ -520,6 +520,6 @@ src/utils/ft_substr.o:
 # strcache performance: lookups = 60 / hit rate = 26%
 # hash-table stats:
 # Load=44/8192=1%, Rehash=0, Collisions=1/60=2%
-# Finished Make data base on Wed Aug 25 17:55:30 2021
+# Finished Make data base on Thu Aug 26 14:32:36 2021
 
  
