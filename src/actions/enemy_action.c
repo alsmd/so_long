@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/27 17:04:12 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/27 19:39:18 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/27 20:00:40 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,8 +71,8 @@ void	render_enemies(t_game *game)
 			i = enemy->active;
 			copy_img_to(&game->map.map, &enemy->sprites[i],
 				to_array(x, y, enemy->sprites[i].w, enemy->sprites[i].h));
-			enemy_animation(game, enemy);
 		}
+		enemy_animation(game, enemy);
 		enemy = enemy->next;
 	}
 }

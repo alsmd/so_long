@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 09:21:04 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/27 19:36:14 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/27 19:53:39 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -114,6 +114,7 @@ typedef struct s_game
 	int			width;
 	int			height;
 	int			block_size;
+	int			game_over;
 }	t_game;
 
 /*Prototypes*/
@@ -144,6 +145,7 @@ void	up(t_game *game);
 void	down(t_game *game);
 void	left(t_game *game);
 void	right(t_game *game);
+void	check_player_collision(int x, int y, t_game *game);
 
 //Item
 void	new_item(t_game *game, int x, int y);
