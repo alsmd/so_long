@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 13:04:32 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/27 16:03:54 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/27 17:35:32 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ void	game_config(t_game *game)
 	game->vars.mlx = mlx_init();
 	map_config(game);
 	player_config(game);
-	enemy_config(game);
 	if (game->map.w > 14)
 		game->width = 14;
 	if (game->map.h > 10)
