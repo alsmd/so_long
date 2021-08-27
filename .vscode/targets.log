@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Fri Aug 27 12:54:38 2021
+# Make data base, printed on Fri Aug 27 13:49:49 2021
 
 # Variables
 
@@ -51,7 +51,7 @@ SNAP_DATA = /var/snap/code/72
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
 # environment
-JOURNAL_STREAM = 8:45551
+JOURNAL_STREAM = 8:43629
 # makefile (from 'Makefile', line 12)
 CFLAGS = -g
 # environment
@@ -83,7 +83,7 @@ LC_CTYPE = pt_BR.UTF-8
 # makefile (from 'Makefile', line 8)
 OBJS = $(SRCS:.c=.o)
 # environment
-MANAGERPID = 953
+MANAGERPID = 963
 # environment
 LESSOPEN = | /usr/bin/lesspipe %s
 # environment
@@ -99,7 +99,7 @@ PATH = /home/flavio/.local/bin:/home/flavio/.local/bin:/usr/local/sbin:/usr/loca
 # environment
 GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
-SESSION_MANAGER = local/flavio-S14BW01:@/tmp/.ICE-unix/1282,unix/flavio-S14BW01:/tmp/.ICE-unix/1282
+SESSION_MANAGER = local/flavio-S14BW01:@/tmp/.ICE-unix/1257,unix/flavio-S14BW01:/tmp/.ICE-unix/1257
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
@@ -117,7 +117,7 @@ DISABLE_WAYLAND = 1
 # environment
 VSCODE_CRASH_REPORTER_START_OPTIONS = {"companyName":"Microsoft","productName":"VSCode","submitURL":"appcenter://code?aid=fba07a4d-84bd-4fc8-a125-9640fc8ce171&uid=5b0aee19-f674-4b13-a8a1-a5060eb11a3f&iid=5b0aee19-f674-4b13-a8a1-a5060eb11a3f&sid=5b0aee19-f674-4b13-a8a1-a5060eb11a3f","uploadToServer":true}
 # environment
-INVOCATION_ID = e0adcd97597f405e8608776ed5fbcd8a
+INVOCATION_ID = 696f12fd065b4a128d226d8a63f4c45f
 # environment
 GDK_PIXBUF_MODULEDIR = /snap/code/72/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders
 # default
@@ -129,7 +129,7 @@ XDG_SESSION_DESKTOP = ubuntu
 # environment
 SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 1763
+GIO_LAUNCHED_DESKTOP_FILE_PID = 2085
 # automatic
 %F = $(notdir $%)
 # environment
@@ -143,7 +143,7 @@ PWD = /home/flavio/Desktop/so_long
 # default
 .LOADED := 
 # environment
-SSH_AGENT_PID = 1225
+SSH_AGENT_PID = 1208
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
 # environment
@@ -189,7 +189,7 @@ MAKECMDGOALS := all
 # environment
 QT_IM_MODULE = ibus
 # makefile (from 'Makefile', line 1)
-SRCS = ./src/main.c ./src/utils/ft_calloc.c ./src/utils/ft_strlen.c ./src/utils/get_next_line_utils.c ./src/utils/get_next_line.c ./src/utils/is_in.c ./src/utils/ft_substr.c ./src/utils/pixel_manipulation.c ./src/utils/create_img.c ./src/checks/check_map.c ./src/checks/check_movs.c ./src/config/game_config.c ./src/config/map_config.c ./src/config/player_config.c ./src/config/new_item.c ./src/actions/player_action.c ./src/actions/game_init.c  ./src/actions/item_action.c  ./src/actions/moviments.c 
+SRCS = ./src/main.c ./src/utils/ft_calloc.c ./src/utils/ft_strlen.c ./src/utils/get_next_line_utils.c ./src/utils/get_next_line.c ./src/utils/is_in.c ./src/utils/ft_substr.c ./src/utils/pixel_manipulation.c ./src/utils/create_img.c ./src/utils/ft_strcat.c ./src/checks/check_map.c ./src/checks/check_movs.c ./src/config/game_config.c ./src/config/map_config.c ./src/config/player_config.c ./src/config/new_item.c ./src/actions/player_action.c ./src/actions/game_init.c  ./src/actions/item_action.c  ./src/actions/moviments.c 
 # environment
 SNAP_USER_DATA = /home/flavio/snap/code/72
 # environment
@@ -199,7 +199,7 @@ CC = clang
 # environment
 GNOME_SHELL_SESSION_MODE = ubuntu
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-06ef5acd-5297-4583-a912-727acc168c7b.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-ca7e9ba9-c5e4-4c7d-8eb7-4e78d2f0d61e.sock
 # default
 MAKE_VERSION := 4.2.1
 # environment
@@ -276,8 +276,8 @@ FLAGS = -ldl -Imlx -Lmlx -lmlx -lm -lbsd -lXext -lX11
 SNAP_REEXEC = 
 # environment
 CHROME_DESKTOP = code-url-handler.desktop
- 
 # environment
+ 
 WINDOWPATH = 2
 # default
 .INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
@@ -290,7 +290,7 @@ LC_ADDRESS = pt_BR.UTF-8
 # environment
 LANG = C
 # environment
-VSCODE_PID = 1815
+VSCODE_PID = 2129
 # variable set hash-table stats:
 # Load=140/1024=14%, Rehash=0, Collisions=28/169=17%
 
@@ -300,9 +300,9 @@ VSCODE_PID = 1815
 
 # Directories
 
-# . (device 45826, inode 1199097): 16 files, no impossibilities.
+# . (device 45826, inode 1199097): 14 files, no impossibilities.
 
-# 16 files, no impossibilities in 1 directories.
+# 14 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -327,7 +327,7 @@ all: so_long
 # Not a target:
 src/actions/player_action.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-27 12:54:13.164869485
+#  Last modified 2021-08-27 13:41:45.856971177
 #  File has been updated.
 #  Successfully updated.
 
@@ -355,7 +355,7 @@ src/utils/get_next_line.o:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-27 12:54:04.464317595
+#  Last modified 2021-08-27 13:49:37.716400029
 #  File has been updated.
 #  Successfully updated.
 
@@ -447,9 +447,16 @@ clean:
 #  recipe to execute (from 'Makefile', line 29):
 	$(RM) $(OBJS)
 
-so_long: src/main.o src/utils/ft_calloc.o src/utils/ft_strlen.o src/utils/get_next_line_utils.o src/utils/get_next_line.o src/utils/is_in.o src/utils/ft_substr.o src/utils/pixel_manipulation.o src/utils/create_img.o src/checks/check_map.o src/checks/check_movs.o src/config/game_config.o src/config/map_config.o src/config/player_config.o src/config/new_item.o src/actions/player_action.o src/actions/game_init.o src/actions/item_action.o src/actions/moviments.o
+# Not a target:
+src/utils/ft_strcat.o:
+#  Implicit rule search has been done.
+#  Last modified 2021-08-27 13:49:39.164446152
+#  File has been updated.
+#  Successfully updated.
+
+so_long: src/main.o src/utils/ft_calloc.o src/utils/ft_strlen.o src/utils/get_next_line_utils.o src/utils/get_next_line.o src/utils/is_in.o src/utils/ft_substr.o src/utils/pixel_manipulation.o src/utils/create_img.o src/utils/ft_strcat.o src/checks/check_map.o src/checks/check_movs.o src/config/game_config.o src/config/map_config.o src/config/player_config.o src/config/new_item.o src/actions/player_action.o src/actions/game_init.o src/actions/item_action.o src/actions/moviments.o
 #  Implicit rule search has not been done.
-#  Last modified 2021-08-27 12:54:13.632900833
+#  Last modified 2021-08-27 13:49:39.468455863
 #  File has been updated.
 #  Successfully updated.
 #  recipe to execute (from 'Makefile', line 25):
@@ -473,7 +480,7 @@ src/utils/get_next_line_utils.o:
 # Not a target:
 src/checks/check_map.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-27 12:16:49.313185086
+#  Last modified 2021-08-27 13:49:19.907847715
 #  File has been updated.
 #  Successfully updated.
 
@@ -499,19 +506,19 @@ src/actions/item_action.o:
 #  Successfully updated.
 
 # files hash-table stats:
-# Load=28/1024=3%, Rehash=0, Collisions=2/63=3%
+# Load=29/1024=3%, Rehash=0, Collisions=2/65=3%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 44 / storage = 636 B / avg = 14 B
-# current buf: size = 8162 B / used = 636 B / count = 44 / avg = 14 B
+# strcache buffers: 1 (0) / strings = 43 / storage = 639 B / avg = 14 B
+# current buf: size = 8162 B / used = 639 B / count = 43 / avg = 14 B
 
-# strcache performance: lookups = 60 / hit rate = 26%
+# strcache performance: lookups = 59 / hit rate = 27%
 # hash-table stats:
-# Load=44/8192=1%, Rehash=0, Collisions=1/60=2%
-# Finished Make data base on Fri Aug 27 12:54:38 2021
+# Load=43/8192=1%, Rehash=0, Collisions=1/59=2%
+# Finished Make data base on Fri Aug 27 13:49:49 2021
 
  

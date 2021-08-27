@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 09:48:10 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/26 19:38:21 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/27 13:51:21 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,41 +20,25 @@ static int	check_format(char	*line)
 			return (0);
 		line++;
 	}
-
 	return (1);
 }
 
 static void	append(char **dest, char *src)
 {
 	char	*holder;
-	char	*dest_tmp;
 	int		index;
 
 	index = 0;
 	if (*dest == 0)
-	{
 		*dest = (char *) ft_calloc(ft_strlen(src) + 1, sizeof(char));
-		dest_tmp = *dest;
-	}
 	else
 	{
 		holder = *dest;
 		*dest = (char *) ft_calloc(ft_strlen(*dest) + ft_strlen(src) + 1, 1);
-		dest_tmp = *dest;
-		while (holder[index])
-		{
-			*dest_tmp = holder[index];
-			dest_tmp++;
-			index++;
-		}
+		ft_strcat(*dest, holder);
 		free(holder);
 	}
-	while (*src && *src != '\n')
-	{
-		*dest_tmp = *src;
-		dest_tmp += 1;
-		src++;
-	}
+	ft_strcat(*dest, src);
 }
 
 static void	make_layout(t_game *game, int x, int y, char *content)
@@ -71,37 +55,49 @@ static void	make_layout(t_game *game, int x, int y, char *content)
 	}
 }
 
-int	check_map(char	*map_path, t_game *game)
+int	get_all_content(int fd, t_game *game)
 {
-	int		fd;
 	int		x;
 	int		y;
 	char	*line;
-	char	*file;
+	char	*all_content;
 
-	file = 0;
-	fd = open(map_path, O_RDONLY);
-	if (fd == -1)
-		return (0);
-	line = get_next_line(fd);
 	x = -1;
 	y = 0;
+	line = get_next_line(fd);
 	while (line)
 	{
 		if (check_format(line) && (x == -1 || x == ft_strlen(line)))
 		{
 			if (x == -1)
 				x = ft_strlen(line);
-			append(&file, line);
+			append(&all_content, line);
 		}
 		else
 			return (0);
 		y++;
 		line = get_next_line(fd);
 	}
-	close(fd);
-	make_layout(game, x, y, file);
+	make_layout(game, x, y, all_content);
 	game->map.w = x;
 	game->map.h = y;
+	return (1);
+}
+
+int	check_map(char	*map_path, t_game *game)
+{
+	int		fd;
+	int		x;
+	int		y;
+
+	fd = open(map_path, O_RDONLY);
+	if (fd == -1)
+		return (0);
+	if (!(get_all_content(fd, game)))
+	{
+		close(fd);
+		return (0);
+	}
+	close(fd);
 	return (1);
 }

@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 13:04:32 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/26 19:38:09 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/27 13:55:25 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,5 @@ void	game_config(t_game *game)
 	if (game->map.h > 10)
 		game->height = 10;
 	game->vars.win = mlx_new_window(game->vars.mlx, game->width * BLOCK_SIZE,
-									game->height * BLOCK_SIZE, "so_long");
+			game->height * BLOCK_SIZE, "so_long");
 }

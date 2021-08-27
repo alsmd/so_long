@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 09:21:04 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/27 12:53:36 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/27 13:46:41 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -126,6 +126,7 @@ void	render_items(t_game *game);
 
 //Utils
 void	*ft_calloc(size_t nmemb, size_t size);
+void	ft_strcat(char *dest, char *src);
 int		ft_strlen(const char *s);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 int		is_in(char *str, char c);

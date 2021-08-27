@@ -6,27 +6,30 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/20 16:15:47 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/23 19:09:11 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/27 14:03:15 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/so_long.h"
 
-
 void	my_mlx_pixel_put(t_data *data, int x, int y, int color)
 {
-	char *dest;
+	char	*dest;
+	int		bytes;
 
-	dest = data->addr + (y * data->line_length + x * (data->bits_per_pixel / 8));
-	*(unsigned int*)dest = color;
+	bytes = (data->bits_per_pixel / 8);
+	dest = data->addr + (y * data->line_length + x * bytes);
+	*(unsigned int *)dest = color;
 }
 
 int	my_mlx_get_pixel(t_data *data, int x, int y)
 {
-	char *dest;
+	char	*dest;
+	int		bytes;
 
-	dest = data->addr + (y * data->line_length + x * (data->bits_per_pixel / 8));
-	return (*(unsigned int*)dest);
+	bytes = (data->bits_per_pixel / 8);
+	dest = data->addr + (y * data->line_length + x * bytes);
+	return (*(unsigned int *)dest);
 }
 
 void	copy_img_from(t_data *dest, t_data *src, int x_src, int y_src, int width, int height)

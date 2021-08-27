@@ -6,13 +6,13 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/28 19:44:45 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/23 10:52:07 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/27 13:56:39 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/so_long.h"
 
-int		ft_strlen(const char *s)
+int	ft_strlen(const char *s)
 {
 	size_t	index;
 

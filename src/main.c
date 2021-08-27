@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 09:21:43 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/24 10:02:05 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/27 13:52:50 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	main(int argc, char *argv[])
 {
 	t_game	game;
 	int		w;
-	
+
 	ft_bzero(&game, sizeof(t_game));
 	if (argc == 2)
 	{

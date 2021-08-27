@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 13:15:44 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/27 11:42:27 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/27 13:56:04 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,10 +52,9 @@ static void	set_tile(char c, t_game *game, int x, int y)
 	}
 	tile.img = mlx_xpm_file_to_image(game->vars.mlx, path, &size, &size);
 	tile.addr = mlx_get_data_addr(tile.img, &tile.bits_per_pixel,
-				&tile.line_length, &tile.endin);
+			&tile.line_length, &tile.endin);
 	copy_img_to(&game->map.full_map, &tile, x, y, size, size);
 }
-
 
 static void	draw_block(t_game *game, int x, int y)
 {
@@ -83,7 +82,7 @@ void	map_config(t_game *game)
 	int		x;
 	int		x_holder;
 	int		y;
-	
+
 	x = game->map.w;
 	x_holder = x;
 	y = game->map.h;
