@@ -6,16 +6,12 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/24 10:32:47 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/26 17:42:46 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/27 12:01:00 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/so_long.h"
 
-void	move_player(t_game *game, int x, int y)
-{
-	
-}
 
 void	player_action(int keycode, t_game *game)
 {
@@ -70,4 +66,11 @@ void	player_action(int keycode, t_game *game)
 		}
 		game->player.frame = 1;
 	}
+}
+void	render_user(t_game *game)
+{	
+	copy_img_to(&game->map.map, &game->player.sprites[game->player.frame],
+				game->player.x * BLOCK_SIZE,
+				game->player.y * BLOCK_SIZE, game->player.w,
+				game->player.h);
 }

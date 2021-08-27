@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 18:31:53 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/24 11:10:28 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/27 11:44:03 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,23 @@
 
 void	player_config(t_game *game)
 {
-	game->player.w = 48;
-	game->player.h = 64;
-	game->player.frame = 2;
-	player_sprites(game);
+	t_data		full_sprite;
+	t_player	*player;
+	int		i;
+
+	i = 0;
+	player = &game->player;
+	full_sprite.w = 144;
+	full_sprite.h = 256;
+	player->w = 48;
+	player->h = 64;
+	player->frame = 2;
+	load_img(&full_sprite, "./imgs/male.xpm", game);
+	while (i < 4)
+	{
+		create_img(&player->sprites[i], player->w, player->h, game);
+		copy_img_from(&player->sprites[i], &full_sprite, 0, player->h * i,
+					player->w, player->h);
+		i++;
+	}
 }

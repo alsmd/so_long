@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 09:21:04 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/26 17:32:08 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/27 12:04:26 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,8 @@ typedef struct s_data
 	int		bits_per_pixel;
 	int		line_length;
 	int		endin;
+	int		w;
+	int		h;
 }	t_data;
 
 typedef struct s_map
@@ -74,7 +76,7 @@ typedef struct s_player
 
 typedef struct s_item
 {
-	t_data	sprites[4];
+	t_data	sprite;
 	int				x;
 	int				y;
 	float			frame;
@@ -100,26 +102,23 @@ typedef struct	s_game
 //General
 void	game_config(t_game *game);
 void	game_init(t_game *game);
-int		key_hook(int keycode, t_game *game);
-
-//Frames
-int		frame_update(t_game *game);
+void	create_img(t_data *img, int w, int h, t_game *game);
+void	load_img(t_data *img, char *path, t_game *game);
 
 //MAP
 void	map_config(t_game *game);
 int	 	check_map(char	*map_path, t_game *game);
-void	map_sprites(t_game *game);
 void	get_active_map(t_game *game);
 
 //PLAYER
 void	player_config(t_game *game);
-void	player_sprites(t_game *game);
 void	player_action(int keycode, t_game *game);
 int		check_mov(t_game *game, int x, int y);
+void	render_user(t_game *game);
 
 //Item
 void	new_item(t_game *game, int x, int y);
-void	item_sprites(t_item *item, t_game *game);
+void	render_items(t_game *game);
 
 //Utils
 void	*ft_calloc(size_t nmemb, size_t size);
