@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 09:21:04 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/27 17:23:18 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/27 19:36:14 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,6 +94,15 @@ typedef struct s_item
 	struct s_item	*next;
 }	t_item;
 
+typedef struct s_fireball
+{
+	t_data				sprite;
+	int					x;
+	int					y;
+	int					steps;
+	struct s_fireball	*next;
+}	t_fireball;
+
 typedef struct s_game
 {
 	t_vars		vars;
@@ -101,6 +110,7 @@ typedef struct s_game
 	t_map		map;
 	t_item		*items;
 	t_enemy		*enemies;
+	t_fireball	*fireballs;
 	int			width;
 	int			height;
 	int			block_size;
@@ -122,6 +132,8 @@ void	get_active_map(t_game *game);
 //Enemy
 void	enemy_config(t_game *game);
 void	render_enemies(t_game *game);
+void	new_fireball(t_game *game, int x, int y);
+int		render_fireball(t_game *game);
 
 //PLAYER
 void	player_config(t_game *game);

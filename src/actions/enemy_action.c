@@ -6,27 +6,28 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/27 17:04:12 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/27 17:57:22 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/27 19:39:18 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/so_long.h"
 
-static void	change_active(t_enemy *enemy)
+static void	change_active(t_game *game, t_enemy *enemy)
 {
 	if (enemy->active < 2)
 		enemy->active += 1;
 	else
 		enemy->active = 0;
+	new_fireball(game, enemy->x, enemy->y);
 }
 
-static void	enemy_animation(t_enemy *enemy)
+static void	enemy_animation(t_game *game, t_enemy *enemy)
 {
 	if (enemy->going_up)
 	{
 		if (enemy->frame <= 0)
 		{
-			change_active(enemy);
+			change_active(game, enemy);
 			enemy->going_up = 0;
 		}
 		else
@@ -65,12 +66,12 @@ void	render_enemies(t_game *game)
 	{
 		if (is_on_map_enemies(enemy, game))
 		{
-			x = ((enemy->x - game->map.x) * BLOCK_SIZE) + 5;
+			x = ((enemy->x - game->map.x) * BLOCK_SIZE) + 25;
 			y = (((enemy->y - game->map.y) * BLOCK_SIZE) + 10) - enemy->frame;
 			i = enemy->active;
 			copy_img_to(&game->map.map, &enemy->sprites[i],
 				to_array(x, y, enemy->sprites[i].w, enemy->sprites[i].h));
-			enemy_animation(enemy);
+			enemy_animation(game, enemy);
 		}
 		enemy = enemy->next;
 	}
