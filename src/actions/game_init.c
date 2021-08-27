@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 13:10:41 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/27 14:32:07 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/27 15:52:12 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ int	frame_update(t_game *game)
 int	key_hook(int keycode, t_game *game)
 {
 	player_action(keycode, game);
+	return (1);
 }
 
 void	game_init(t_game *game)

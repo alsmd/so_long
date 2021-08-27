@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/27 11:59:37 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/27 14:36:20 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/27 15:51:46 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ int	is_on_map(t_item *item, t_game *game)
 		is_on_map = 0;
 	if (!(item->y >= game->map.y && item->y < game->map.y + game->height))
 		is_on_map = 0;
+	return (is_on_map);
 }
 
 void	render_items(t_game *game)
