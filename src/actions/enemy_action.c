@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/27 17:04:12 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/27 17:30:38 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/27 17:57:22 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ void	render_enemies(t_game *game)
 		if (is_on_map_enemies(enemy, game))
 		{
 			x = ((enemy->x - game->map.x) * BLOCK_SIZE) + 5;
-			y = ((enemy->y - game->map.y) * BLOCK_SIZE) - enemy->frame;
+			y = (((enemy->y - game->map.y) * BLOCK_SIZE) + 10) - enemy->frame;
 			i = enemy->active;
 			copy_img_to(&game->map.map, &enemy->sprites[i],
 				to_array(x, y, enemy->sprites[i].w, enemy->sprites[i].h));
