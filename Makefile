@@ -3,7 +3,7 @@ SRCS =	./src/main.c \
 		./src/utils/ft_substr.c ./src/utils/pixel_manipulation.c ./src/utils/create_img.c \
 		./src/checks/check_map.c ./src/checks/check_movs.c \
 		./src/config/game_config.c ./src/config/map_config.c ./src/config/player_config.c ./src/config/new_item.c \
-		./src/actions/player_action.c ./src/actions/game_init.c  ./src/actions/item_action.c 
+		./src/actions/player_action.c ./src/actions/game_init.c  ./src/actions/item_action.c  ./src/actions/moviments.c 
 
 OBJS = $(SRCS:.c=.o)
 

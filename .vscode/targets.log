@@ -1,6 +1,4 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
-make: *** No rule to make target 'src/actions/item_action.o', needed by 'so_long'.  Stop.
- 
 # GNU Make 4.2.1
 # Built for x86_64-pc-linux-gnu
 # Copyright (C) 1988-2016 Free Software Foundation, Inc.
@@ -8,7 +6,7 @@ make: *** No rule to make target 'src/actions/item_action.o', needed by 'so_long
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Fri Aug 27 12:05:04 2021
+# Make data base, printed on Fri Aug 27 12:54:38 2021
 
 # Variables
 
@@ -53,7 +51,7 @@ SNAP_DATA = /var/snap/code/72
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
 # environment
-JOURNAL_STREAM = 8:47131
+JOURNAL_STREAM = 8:45551
 # makefile (from 'Makefile', line 12)
 CFLAGS = -g
 # environment
@@ -85,7 +83,7 @@ LC_CTYPE = pt_BR.UTF-8
 # makefile (from 'Makefile', line 8)
 OBJS = $(SRCS:.c=.o)
 # environment
-MANAGERPID = 944
+MANAGERPID = 953
 # environment
 LESSOPEN = | /usr/bin/lesspipe %s
 # environment
@@ -101,7 +99,7 @@ PATH = /home/flavio/.local/bin:/home/flavio/.local/bin:/usr/local/sbin:/usr/loca
 # environment
 GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
-SESSION_MANAGER = local/flavio-S14BW01:@/tmp/.ICE-unix/1244,unix/flavio-S14BW01:/tmp/.ICE-unix/1244
+SESSION_MANAGER = local/flavio-S14BW01:@/tmp/.ICE-unix/1282,unix/flavio-S14BW01:/tmp/.ICE-unix/1282
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
@@ -119,7 +117,7 @@ DISABLE_WAYLAND = 1
 # environment
 VSCODE_CRASH_REPORTER_START_OPTIONS = {"companyName":"Microsoft","productName":"VSCode","submitURL":"appcenter://code?aid=fba07a4d-84bd-4fc8-a125-9640fc8ce171&uid=5b0aee19-f674-4b13-a8a1-a5060eb11a3f&iid=5b0aee19-f674-4b13-a8a1-a5060eb11a3f&sid=5b0aee19-f674-4b13-a8a1-a5060eb11a3f","uploadToServer":true}
 # environment
-INVOCATION_ID = 44426ca5a2754ebd90c5cbc6beab2cc9
+INVOCATION_ID = e0adcd97597f405e8608776ed5fbcd8a
 # environment
 GDK_PIXBUF_MODULEDIR = /snap/code/72/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders
 # default
@@ -131,7 +129,7 @@ XDG_SESSION_DESKTOP = ubuntu
 # environment
 SSH_AUTH_SOCK = /run/user/1000/keyring/ssh
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 13779
+GIO_LAUNCHED_DESKTOP_FILE_PID = 1763
 # automatic
 %F = $(notdir $%)
 # environment
@@ -145,7 +143,7 @@ PWD = /home/flavio/Desktop/so_long
 # default
 .LOADED := 
 # environment
-SSH_AGENT_PID = 1180
+SSH_AGENT_PID = 1225
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
 # environment
@@ -191,7 +189,7 @@ MAKECMDGOALS := all
 # environment
 QT_IM_MODULE = ibus
 # makefile (from 'Makefile', line 1)
-SRCS = ./src/main.c ./src/utils/ft_calloc.c ./src/utils/ft_strlen.c ./src/utils/get_next_line_utils.c ./src/utils/get_next_line.c ./src/utils/is_in.c ./src/utils/ft_substr.c ./src/utils/pixel_manipulation.c ./src/utils/create_img.c ./src/checks/check_map.c ./src/checks/check_movs.c ./src/config/game_config.c ./src/config/map_config.c ./src/config/player_config.c ./src/config/new_item.c ./src/actions/player_action.c ./src/actions/game_init.c  ./src/actions/item_action.c 
+SRCS = ./src/main.c ./src/utils/ft_calloc.c ./src/utils/ft_strlen.c ./src/utils/get_next_line_utils.c ./src/utils/get_next_line.c ./src/utils/is_in.c ./src/utils/ft_substr.c ./src/utils/pixel_manipulation.c ./src/utils/create_img.c ./src/checks/check_map.c ./src/checks/check_movs.c ./src/config/game_config.c ./src/config/map_config.c ./src/config/player_config.c ./src/config/new_item.c ./src/actions/player_action.c ./src/actions/game_init.c  ./src/actions/item_action.c  ./src/actions/moviments.c 
 # environment
 SNAP_USER_DATA = /home/flavio/snap/code/72
 # environment
@@ -201,7 +199,7 @@ CC = clang
 # environment
 GNOME_SHELL_SESSION_MODE = ubuntu
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-22e97eb0-00e2-46bd-998a-5ca64aa5d13e.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-06ef5acd-5297-4583-a912-727acc168c7b.sock
 # default
 MAKE_VERSION := 4.2.1
 # environment
@@ -278,6 +276,7 @@ FLAGS = -ldl -Imlx -Lmlx -lmlx -lm -lbsd -lXext -lX11
 SNAP_REEXEC = 
 # environment
 CHROME_DESKTOP = code-url-handler.desktop
+ 
 # environment
 WINDOWPATH = 2
 # default
@@ -290,9 +289,8 @@ GJS_DEBUG_OUTPUT = stderr
 LC_ADDRESS = pt_BR.UTF-8
 # environment
 LANG = C
- 
 # environment
-VSCODE_PID = 13823
+VSCODE_PID = 1815
 # variable set hash-table stats:
 # Load=140/1024=14%, Rehash=0, Collisions=28/169=17%
 
@@ -315,7 +313,7 @@ VSCODE_PID = 13823
 # Not a target:
 src/config/game_config.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-27 11:57:10.832480254
+#  Last modified 2021-08-27 12:16:49.613166861
 #  File has been updated.
 #  Successfully updated.
 
@@ -323,68 +321,69 @@ all: so_long
 #  Command line target.
 #  Implicit rule search has been done.
 #  File does not exist.
-#  File has not been updated.
+#  File has been updated.
+#  Successfully updated.
 
 # Not a target:
 src/actions/player_action.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-27 11:57:11.436505791
+#  Last modified 2021-08-27 12:54:13.164869485
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 src/main.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-27 11:57:08.956400896
+#  Last modified 2021-08-27 12:16:47.993265443
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 src/utils/pixel_manipulation.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-27 11:57:10.072448112
+#  Last modified 2021-08-27 12:16:49.013203311
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 src/utils/get_next_line.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-27 11:57:09.600428144
+#  Last modified 2021-08-27 12:16:48.577229868
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-27 12:04:54.254715949
+#  Last modified 2021-08-27 12:54:04.464317595
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 src/actions/game_init.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-27 11:57:11.732518306
+#  Last modified 2021-08-27 12:16:50.397119297
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 src/utils/create_img.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-27 11:57:10.220454371
+#  Last modified 2021-08-27 12:16:49.16119432
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 src/utils/is_in.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-27 11:57:09.752434575
+#  Last modified 2021-08-27 12:16:48.71722134
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 src/checks/check_movs.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-27 11:57:10.532467566
+#  Last modified 2021-08-27 12:45:36.106827015
 #  File has been updated.
 #  Successfully updated.
 
@@ -405,14 +404,14 @@ fclean: clean
 # Not a target:
 src/utils/ft_strlen.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-27 11:57:09.284414774
+#  Last modified 2021-08-27 12:16:48.293247167
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 src/config/player_config.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-27 11:57:11.132492939
+#  Last modified 2021-08-27 12:16:49.937147178
 #  File has been updated.
 #  Successfully updated.
 
@@ -425,7 +424,7 @@ src/config/player_config.o:
 # Not a target:
 src/config/new_item.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-27 11:57:11.280499197
+#  Last modified 2021-08-27 12:16:50.0851382
 #  File has been updated.
 #  Successfully updated.
 
@@ -434,6 +433,13 @@ re: fclean all
 #  Modification time never checked.
 #  File has not been updated.
 
+# Not a target:
+src/actions/moviments.o:
+#  Implicit rule search has been done.
+#  Last modified 2021-08-27 12:54:13.292878059
+#  File has been updated.
+#  Successfully updated.
+
 clean:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
@@ -441,10 +447,11 @@ clean:
 #  recipe to execute (from 'Makefile', line 29):
 	$(RM) $(OBJS)
 
-so_long: src/main.o src/utils/ft_calloc.o src/utils/ft_strlen.o src/utils/get_next_line_utils.o src/utils/get_next_line.o src/utils/is_in.o src/utils/ft_substr.o src/utils/pixel_manipulation.o src/utils/create_img.o src/checks/check_map.o src/checks/check_movs.o src/config/game_config.o src/config/map_config.o src/config/player_config.o src/config/new_item.o src/actions/player_action.o src/actions/game_init.o src/actions/item_action.o
+so_long: src/main.o src/utils/ft_calloc.o src/utils/ft_strlen.o src/utils/get_next_line_utils.o src/utils/get_next_line.o src/utils/is_in.o src/utils/ft_substr.o src/utils/pixel_manipulation.o src/utils/create_img.o src/checks/check_map.o src/checks/check_movs.o src/config/game_config.o src/config/map_config.o src/config/player_config.o src/config/new_item.o src/actions/player_action.o src/actions/game_init.o src/actions/item_action.o src/actions/moviments.o
 #  Implicit rule search has not been done.
-#  Last modified 2021-08-27 11:58:00.578563654
-#  File has not been updated.
+#  Last modified 2021-08-27 12:54:13.632900833
+#  File has been updated.
+#  Successfully updated.
 #  recipe to execute (from 'Makefile', line 25):
 	make -C mlx
 	${CC} $(CFLAGS) -o $(NAME) $(OBJS) $(FLAGS)
@@ -452,58 +459,59 @@ so_long: src/main.o src/utils/ft_calloc.o src/utils/ft_strlen.o src/utils/get_ne
 # Not a target:
 src/config/map_config.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-27 11:57:10.984486682
+#  Last modified 2021-08-27 12:16:49.785156412
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 src/utils/get_next_line_utils.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-27 11:57:09.440421375
+#  Last modified 2021-08-27 12:16:48.429238883
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 src/checks/check_map.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-27 11:57:10.384461307
+#  Last modified 2021-08-27 12:16:49.313185086
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 src/utils/ft_calloc.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-27 11:57:09.136408513
+#  Last modified 2021-08-27 12:16:48.149255939
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 src/utils/ft_substr.o:
 #  Implicit rule search has been done.
-#  Last modified 2021-08-27 11:57:09.904441006
+#  Last modified 2021-08-27 12:16:48.861212569
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
 src/actions/item_action.o:
 #  Implicit rule search has been done.
-#  File does not exist.
-#  File has not been updated.
+#  Last modified 2021-08-27 12:16:50.549110089
+#  File has been updated.
+#  Successfully updated.
 
 # files hash-table stats:
-# Load=27/1024=3%, Rehash=0, Collisions=2/61=3%
+# Load=28/1024=3%, Rehash=0, Collisions=2/63=3%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 43 / storage = 612 B / avg = 14 B
-# current buf: size = 8162 B / used = 612 B / count = 43 / avg = 14 B
+# strcache buffers: 1 (0) / strings = 44 / storage = 636 B / avg = 14 B
+# current buf: size = 8162 B / used = 636 B / count = 44 / avg = 14 B
 
-# strcache performance: lookups = 59 / hit rate = 27%
+# strcache performance: lookups = 60 / hit rate = 26%
 # hash-table stats:
-# Load=43/8192=1%, Rehash=0, Collisions=1/59=2%
-# Finished Make data base on Fri Aug 27 12:05:04 2021
+# Load=44/8192=1%, Rehash=0, Collisions=1/60=2%
+# Finished Make data base on Fri Aug 27 12:54:38 2021
 
  

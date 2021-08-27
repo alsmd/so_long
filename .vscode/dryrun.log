@@ -1,10 +1,5 @@
 make --dry-run --keep-going --print-directory
 make: Entering directory '/home/flavio/Desktop/so_long'
-clang -g -Imlx -Ibass -c src/actions/player_action.c -o src/actions/player_action.o
-clang -g -Imlx -Ibass -c src/actions/game_init.c -o src/actions/game_init.o
-clang -g -Imlx -Ibass -c src/actions/item_action.c -o src/actions/item_action.o
- 
-make -C mlx
-clang -g -o so_long ./src/main.o ./src/utils/ft_calloc.o ./src/utils/ft_strlen.o ./src/utils/get_next_line_utils.o ./src/utils/get_next_line.o ./src/utils/is_in.o ./src/utils/ft_substr.o ./src/utils/pixel_manipulation.o ./src/utils/create_img.o ./src/checks/check_map.o ./src/checks/check_movs.o ./src/config/game_config.o ./src/config/map_config.o ./src/config/player_config.o ./src/config/new_item.o ./src/actions/player_action.o ./src/actions/game_init.o ./src/actions/item_action.o -ldl -Imlx -Lmlx -lmlx -lm -lbsd -lXext -lX11
+make: Nothing to be done for 'all'.
 make: Leaving directory '/home/flavio/Desktop/so_long'
  

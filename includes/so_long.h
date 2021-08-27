@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 09:21:04 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/27 12:04:26 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/27 12:53:36 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -115,6 +115,10 @@ void	player_config(t_game *game);
 void	player_action(int keycode, t_game *game);
 int		check_mov(t_game *game, int x, int y);
 void	render_user(t_game *game);
+void	up(t_game *game);
+void	down(t_game *game);
+void	left(t_game *game);
+void	right(t_game *game);
 
 //Item
 void	new_item(t_game *game, int x, int y);
