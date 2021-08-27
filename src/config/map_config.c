@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 13:15:44 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/27 13:56:04 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/27 14:29:36 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	get_active_map(t_game *game)
 	y = game->map.y * BLOCK_SIZE;
 	if (!game->map.map.img)
 		create_img(&game->map.map, w, h, game);
-	copy_img_from(&game->map.map, &game->map.full_map, x, y, w, h);
+	copy_img_from(&game->map.map, &game->map.full_map, to_array(x, y, w, h));
 }
 
 static void	set_tile(char c, t_game *game, int x, int y)
@@ -53,7 +53,7 @@ static void	set_tile(char c, t_game *game, int x, int y)
 	tile.img = mlx_xpm_file_to_image(game->vars.mlx, path, &size, &size);
 	tile.addr = mlx_get_data_addr(tile.img, &tile.bits_per_pixel,
 			&tile.line_length, &tile.endin);
-	copy_img_to(&game->map.full_map, &tile, x, y, size, size);
+	copy_img_to(&game->map.full_map, &tile, to_array(x, y, size, size));
 }
 
 static void	draw_block(t_game *game, int x, int y)

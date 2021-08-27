@@ -6,24 +6,24 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 09:21:04 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/27 13:46:41 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/27 14:39:23 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SO_LONG_H
 
 /*INCLUDES*/
-#include "../mlx/mlx.h"
-#include "get_next_line.h"
-#include <X11/X.h>
-#include <sys/types.h>
-#include <sys/stat.h>
-#include <fcntl.h>
-#include <unistd.h>
-#include <limits.h>
-#include <stdlib.h>
-#include <errno.h>
-#include <stdio.h>
+# include "../mlx/mlx.h"
+# include "get_next_line.h"
+# include <X11/X.h>
+# include <sys/types.h>
+# include <sys/stat.h>
+# include <fcntl.h>
+# include <unistd.h>
+# include <limits.h>
+# include <stdlib.h>
+# include <errno.h>
+# include <stdio.h>
 /*DEFINES*/
 # define SO_LONG_H
 # define W 119
@@ -34,12 +34,11 @@
 # define OBJECTS "EC01P"
 
 /*STRUCTS*/
-typedef	struct	s_vars
+typedef struct s_vars
 {
 	void	*mlx;
 	void	*win;
 }	t_vars;
-
 
 typedef struct s_data
 {
@@ -76,7 +75,7 @@ typedef struct s_player
 
 typedef struct s_item
 {
-	t_data	sprite;
+	t_data			sprite;
 	int				x;
 	int				y;
 	float			frame;
@@ -84,7 +83,7 @@ typedef struct s_item
 	struct s_item	*next;
 }	t_item;
 
-typedef struct	s_game
+typedef struct s_game
 {
 	t_vars		vars;
 	t_player	player;
@@ -94,8 +93,6 @@ typedef struct	s_game
 	int			height;
 	int			block_size;
 }	t_game;
-
-
 
 /*Prototypes*/
 
@@ -107,7 +104,7 @@ void	load_img(t_data *img, char *path, t_game *game);
 
 //MAP
 void	map_config(t_game *game);
-int	 	check_map(char	*map_path, t_game *game);
+int		check_map(char *map_path, t_game *game);
 void	get_active_map(t_game *game);
 
 //PLAYER
@@ -132,7 +129,23 @@ char	*ft_substr(char const *s, unsigned int start, size_t len);
 int		is_in(char *str, char c);
 void	my_mlx_pixel_put(t_data *data, int x, int y, int color);
 int		my_mlx_get_pixel(t_data *data, int x, int y);
-void	copy_img_from(t_data *dest, t_data *src, int x_src, int y_src, int width, int height);
-void	copy_img_to(t_data *dest, t_data *src, int x_dest, int y_dest, int width, int height);
+
+/*
+	@param	info[4]		info[0] = x_src, info[1] = y_src,
+						info[2] = width, info[3] = height
+	@brief				Will copy a piece of the image src starting from x,y and
+						cut width and height.
+						The image will be past inside dest.
+*/
+void	copy_img_from(t_data *dest, t_data *src, int info[4]);
+/*
+	@param	info[4]		info[0] = x_dest, info[1] = y_dest, info[2] = width,
+						info[3] = height
+	@brief				Will copy width and height from image src and past into dest on 
+						cordanites x and y
+*/
+void	copy_img_to(t_data *dest, t_data *src, int info[4]);
+int		*to_array(int x, int y, int w, int h);
+
 void	clear_image(t_data *img, int width, int height, int color);
 #endif

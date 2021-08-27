@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/20 16:15:47 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/27 14:03:15 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/27 14:28:27 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int	my_mlx_get_pixel(t_data *data, int x, int y)
 	return (*(unsigned int *)dest);
 }
 
-void	copy_img_from(t_data *dest, t_data *src, int x_src, int y_src, int width, int height)
+void	copy_img_from(t_data *dest, t_data *src, int info[4])
 {
 	int	pixel;
 	int	x;
@@ -41,25 +41,26 @@ void	copy_img_from(t_data *dest, t_data *src, int x_src, int y_src, int width, i
 
 	x = 0;
 	y = 0;
-	holder = y_src;
-	while (x < width)
+	holder = info[1];
+	while (x < info[2])
 	{
-		while (y < height)
+		while (y < info[3])
 		{
-			pixel = my_mlx_get_pixel(src, x_src, y_src);
-			if (pixel != 0  && pixel != -16777216)
+			pixel = my_mlx_get_pixel(src, info[0], info[1]);
+			if (pixel != 0 && pixel != -16777216)
 				my_mlx_pixel_put(dest, x, y, pixel);
 			y++;
-			y_src++;
+			info[1]++;
 		}
 		y = 0;
-		y_src = holder;
-		x_src++;
+		info[1] = holder;
+		info[0]++;
 		x++;
 	}
+	free(info);
 }
 
-void	copy_img_to(t_data *dest, t_data *src, int x_dest, int y_dest, int width, int height)
+void	copy_img_to(t_data *dest, t_data *src, int info[4])
 {
 	int	pixel;
 	int	x;
@@ -68,39 +69,33 @@ void	copy_img_to(t_data *dest, t_data *src, int x_dest, int y_dest, int width, i
 
 	x = 0;
 	y = 0;
-	holder = y_dest;
-	while (x < width)
+	holder = info[1];
+	while (x < info[2])
 	{
-		while (y < height)
+		while (y < info[3])
 		{
 			pixel = my_mlx_get_pixel(src, x, y);
-			if (pixel != 0  && pixel != -16777216)
-				my_mlx_pixel_put(dest, x_dest, y_dest, pixel);
+			if (pixel != 0 && pixel != -16777216)
+				my_mlx_pixel_put(dest, info[0], info[1], pixel);
 			y++;
-			y_dest++;
+			info[1]++;
 		}
 		y = 0;
-		y_dest = holder;
-		x_dest++;
+		info[1] = holder;
+		info[0]++;
 		x++;
 	}
+	free(info);
 }
 
-void	clear_image(t_data *img, int width, int height, int color)
+int	*to_array(int x, int y, int w, int h)
 {
-	int	x;
-	int	y;
+	int	*array;
 
-	x = 0;
-	y = 0;	
-	while (x < width)
-	{
-		while (y < height)
-		{
-			my_mlx_pixel_put(img, x, y, color);
-			y++;
-		}
-		y = 0;
-		x++;
-	}
+	array = (int *)malloc(sizeof(int) * 4);
+	array[0] = x;
+	array[1] = y;
+	array[2] = w;
+	array[3] = h;
+	return (array);
 }

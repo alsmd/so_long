@@ -3,6 +3,7 @@
 	"files.associations": {
 		"stdlib.h": "c",
 		"so_long.h": "c",
-		"get_next_line.h": "c"
+		"get_next_line.h": "c",
+		"unistd.h": "c"
 	}
 }

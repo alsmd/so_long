@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 18:31:53 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/27 13:54:47 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/27 14:29:18 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,8 @@ void	player_config(t_game *game)
 	while (i < 4)
 	{
 		create_img(&player->sprites[i], player->w, player->h, game);
-		copy_img_from(&player->sprites[i], &full_sprite, 0, player->h * i,
-			player->w, player->h);
+		copy_img_from(&player->sprites[i], &full_sprite,
+			to_array(0, player->h * i, player->w, player->h));
 		i++;
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/27 12:46:33 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/27 12:52:41 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/27 14:31:15 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,20 +40,20 @@ void	down(t_game *game)
 void	left(t_game *game)
 {
 	if (check_mov(game, -1, 0))
-		{
-			if (game->map.x > 0  && game->player.x < (game->width) / 2)
-				game->map.x -= 1;
-			else
-				game->player.x -= 1;
-		}
-		game->player.frame = 3;
+	{
+		if (game->map.x > 0 && game->player.x < (game->width) / 2)
+			game->map.x -= 1;
+		else
+			game->player.x -= 1;
+	}
+	game->player.frame = 3;
 }
 
 void	right(t_game *game)
 {
 	if (check_mov(game, 1, 0))
 	{
-		if ((game->map.x < game->map.w - game->width)\
+		if ((game->map.x < game->map.w - game->width) \
 			&& game->player.x > game->width / 2
 		)
 			game->map.x += 1;

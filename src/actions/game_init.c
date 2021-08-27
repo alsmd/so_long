@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 13:10:41 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/27 12:04:34 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/27 14:32:07 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,14 @@ int	frame_update(t_game *game)
 	get_active_map(game);
 	render_user(game);
 	render_items(game);
-	mlx_put_image_to_window(game->vars.mlx, game->vars.win, game->map.map.img, 0, 0);
+	mlx_put_image_to_window(game->vars.mlx, game->vars.win,
+		game->map.map.img, 0, 0);
 	return (1);
 }
 
 int	key_hook(int keycode, t_game *game)
 {
-	player_action(keycode, game);	
+	player_action(keycode, game);
 }
 
 void	game_init(t_game *game)
