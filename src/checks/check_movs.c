@@ -1,26 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   game_config.c                                      :+:      :+:    :+:   */
+/*   check_movs.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/23 13:04:32 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/26 19:38:09 by flavio           ###   ########.fr       */
+/*   Created: 2021/08/26 17:23:01 by flavio            #+#    #+#             */
+/*   Updated: 2021/08/26 17:29:34 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/so_long.h"
 
-void	game_config(t_game *game)
+int	check_mov(t_game *game, int x, int y)
 {
-	game->vars.mlx = mlx_init();
-	map_config(game);
-	player_config(game);
-	if (game->map.w > 14)
-		game->width = 14;
-	if (game->map.h > 10)
-		game->height = 10;
-	game->vars.win = mlx_new_window(game->vars.mlx, game->width * BLOCK_SIZE,
-									game->height * BLOCK_SIZE, "so_long");
+	y += game->player.y + game->map.y;
+	x += game->player.x + game->map.x;
+	if (game->map.layout[y][x] != '1')
+		return (1);
+	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 09:21:04 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/24 11:54:42 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/26 17:32:08 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -115,6 +115,7 @@ void	get_active_map(t_game *game);
 void	player_config(t_game *game);
 void	player_sprites(t_game *game);
 void	player_action(int keycode, t_game *game);
+int		check_mov(t_game *game, int x, int y);
 
 //Item
 void	new_item(t_game *game, int x, int y);
