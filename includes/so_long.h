@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 09:21:04 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/27 14:39:23 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/27 16:25:53 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,15 @@ typedef struct s_map
 	int		h;
 }	t_map;
 
+typedef struct s_enemy
+{
+	t_data			sprites[3];
+	int				frame;
+	int				x;
+	int				y;
+	struct s_enemy	*next;
+}	t_enemy;
+
 typedef struct s_player
 {
 	t_data	sprites[4];
@@ -89,6 +98,7 @@ typedef struct s_game
 	t_player	player;
 	t_map		map;
 	t_item		*items;
+	t_enemy		*enemies;
 	int			width;
 	int			height;
 	int			block_size;
@@ -106,6 +116,9 @@ void	load_img(t_data *img, char *path, t_game *game);
 void	map_config(t_game *game);
 int		check_map(char *map_path, t_game *game);
 void	get_active_map(t_game *game);
+
+//Enemy
+void	enemy_config(t_game *game);
 
 //PLAYER
 void	player_config(t_game *game);

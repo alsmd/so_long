@@ -1,26 +1,7 @@
-make --dry-run --always-make --keep-going --print-directory
+make --dry-run --keep-going --print-directory
 make: Entering directory '/home/flavio/Desktop/so_long'
-clang -g -Imlx -Ibass -c src/main.c -o src/main.o
-clang -g -Imlx -Ibass -c src/utils/ft_calloc.c -o src/utils/ft_calloc.o
-clang -g -Imlx -Ibass -c src/utils/ft_strlen.c -o src/utils/ft_strlen.o
-clang -g -Imlx -Ibass -c src/utils/get_next_line_utils.c -o src/utils/get_next_line_utils.o
-clang -g -Imlx -Ibass -c src/utils/get_next_line.c -o src/utils/get_next_line.o
-clang -g -Imlx -Ibass -c src/utils/is_in.c -o src/utils/is_in.o
-clang -g -Imlx -Ibass -c src/utils/ft_substr.c -o src/utils/ft_substr.o
-clang -g -Imlx -Ibass -c src/utils/pixel_manipulation.c -o src/utils/pixel_manipulation.o
-clang -g -Imlx -Ibass -c src/utils/create_img.c -o src/utils/create_img.o
-clang -g -Imlx -Ibass -c src/utils/ft_strcat.c -o src/utils/ft_strcat.o
-clang -g -Imlx -Ibass -c src/checks/check_map.c -o src/checks/check_map.o
-clang -g -Imlx -Ibass -c src/checks/check_movs.c -o src/checks/check_movs.o
-clang -g -Imlx -Ibass -c src/config/game_config.c -o src/config/game_config.o
-clang -g -Imlx -Ibass -c src/config/map_config.c -o src/config/map_config.o
-clang -g -Imlx -Ibass -c src/config/player_config.c -o src/config/player_config.o
-clang -g -Imlx -Ibass -c src/config/new_item.c -o src/config/new_item.o
-clang -g -Imlx -Ibass -c src/actions/player_action.c -o src/actions/player_action.o
-clang -g -Imlx -Ibass -c src/actions/game_init.c -o src/actions/game_init.o
-clang -g -Imlx -Ibass -c src/actions/item_action.c -o src/actions/item_action.o
-clang -g -Imlx -Ibass -c src/actions/moviments.c -o src/actions/moviments.o
+clang -g -Imlx -Ibass -c src/config/enemy_config.c -o src/config/enemy_config.o
 make -C mlx
-clang -g -o so_long ./src/main.o ./src/utils/ft_calloc.o ./src/utils/ft_strlen.o ./src/utils/get_next_line_utils.o ./src/utils/get_next_line.o ./src/utils/is_in.o ./src/utils/ft_substr.o ./src/utils/pixel_manipulation.o ./src/utils/create_img.o ./src/utils/ft_strcat.o ./src/checks/check_map.o ./src/checks/check_movs.o ./src/config/game_config.o ./src/config/map_config.o ./src/config/player_config.o ./src/config/new_item.o ./src/actions/player_action.o ./src/actions/game_init.o ./src/actions/item_action.o ./src/actions/moviments.o -ldl -Imlx -Lmlx -lmlx -lm -lbsd -lXext -lX11
+clang -g -o so_long ./src/main.o ./src/utils/ft_calloc.o ./src/utils/ft_strlen.o ./src/utils/get_next_line_utils.o ./src/utils/get_next_line.o ./src/utils/is_in.o ./src/utils/ft_substr.o ./src/utils/pixel_manipulation.o ./src/utils/create_img.o ./src/utils/ft_strcat.o ./src/checks/check_map.o ./src/checks/check_movs.o ./src/config/game_config.o ./src/config/map_config.o ./src/config/player_config.o ./src/config/new_item.o ./src/config/enemy_config.o ./src/actions/player_action.o ./src/actions/game_init.o ./src/actions/item_action.o ./src/actions/moviments.o teste.o -ldl -Imlx -Lmlx -lmlx -lm -lbsd -lXext -lX11
 make: Leaving directory '/home/flavio/Desktop/so_long'
  

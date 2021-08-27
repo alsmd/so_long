@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 09:48:10 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/27 13:51:21 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/27 15:59:38 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,7 @@ int	get_all_content(int fd, t_game *game)
 
 	x = -1;
 	y = 0;
+	all_content = 0;
 	line = get_next_line(fd);
 	while (line)
 	{
