@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/27 15:16:13 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/27 16:41:15 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/27 17:29:59 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,33 +21,10 @@ int	check_surround(int y, int x, t_game *game)
 	index = 0;
 	range = 5;
 	layout = game->map.layout;
-	if (layout[y][x] == '1')
+	if (layout[y][x] != '0')
 		return (0);
-	if (layout[y][x + 1] == 'E')
+	if (layout[y][x - 1] == 'C')
 		return (1);
-	if (layout[y][x - 1] == 'E')
-		return (1);
-	if (layout[y + 1][x] == 'E')
-		return (1);
-	if (layout[y - 1][x] == 'E')
-		return (1);
-	/* while (index <= range)
-	{
-		if (layout[y + index][x] == '1' || layout[y + index][x] == 'P')
-			return (0);
-		if (layout[y][x + index] == '1' || layout[y][x + index] == 'P')
-			return (0);
-		index++;
-	}
-	index = 0;
-	while (index <= range)
-	{
-		if (layout[y - index][x] == '1' || layout[y - index][x] == 'P')
-			return (0);
-		if (layout[y][x - index] == '1' || layout[y][x - index] == 'P')
-			return (0);
-		index++;
-	} */
 	return (0);
 }
 
@@ -61,7 +38,13 @@ void	new_enemy(t_game *game, int x, int y)
 	new_item->y = y;
 	new_item->sprites[0].w = 80;
 	new_item->sprites[0].h = 96;
+	new_item->sprites[1].w = 122;
+	new_item->sprites[1].h = 103;
+	new_item->sprites[2].w = 86;
+	new_item->sprites[2].h = 110;
 	load_img(&new_item->sprites[0], "./imgs/enemy.xpm", game);
+	load_img(&new_item->sprites[1], "./imgs/enemy2.xpm", game);
+	load_img(&new_item->sprites[2], "./imgs/enemy3.xpm", game);
 	begin = game->enemies;
 	while (begin && begin->next)
 		begin = begin->next;
@@ -76,7 +59,9 @@ void	enemy_config(t_game *game)
 	int		y;
 	int		x;
 	int		x_holder;
+	int		number;
 
+	number = 0;
 	y = game->map.h;
 	x = game->map.w;
 	x_holder = x;
@@ -84,8 +69,11 @@ void	enemy_config(t_game *game)
 	{
 		while (x--)
 		{
-			if (check_surround(y, x, game))
+			if (check_surround(y, x, game) && number < 10)
+			{
 				new_enemy(game, x, y);
+				number++;
+			}
 		}
 		x = x_holder;
 	}

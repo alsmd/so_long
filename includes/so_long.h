@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 09:21:04 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/27 16:25:53 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/27 17:23:18 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,9 +65,11 @@ typedef struct s_map
 typedef struct s_enemy
 {
 	t_data			sprites[3];
-	int				frame;
+	float			frame;
+	int				active;
 	int				x;
 	int				y;
+	int				going_up;
 	struct s_enemy	*next;
 }	t_enemy;
 
@@ -119,6 +121,7 @@ void	get_active_map(t_game *game);
 
 //Enemy
 void	enemy_config(t_game *game);
+void	render_enemies(t_game *game);
 
 //PLAYER
 void	player_config(t_game *game);
