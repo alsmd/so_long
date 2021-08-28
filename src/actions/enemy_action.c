@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/27 17:04:12 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/28 09:44:04 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/28 10:49:07 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ void	draw_enemy(t_enemy *enemy, t_game *game)
 	else
 		w = BLOCK_SIZE;
 	copy_img_to(&game->map.map, &enemy->sprites[i],
-				to_array(x, y, w, enemy->sprites[i].h));
+		to_array(x, y, w, enemy->sprites[i].h));
 }
 
 void	render_enemies(t_game *game)

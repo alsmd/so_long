@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 09:21:04 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/27 19:53:39 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/28 13:07:09 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -124,6 +124,8 @@ void	game_config(t_game *game);
 void	game_init(t_game *game);
 void	create_img(t_data *img, int w, int h, t_game *game);
 void	load_img(t_data *img, char *path, t_game *game);
+void	print_over(t_game *game);
+void	check_exit(t_game *game);
 
 //MAP
 void	map_config(t_game *game);
@@ -134,7 +136,7 @@ void	get_active_map(t_game *game);
 void	enemy_config(t_game *game);
 void	render_enemies(t_game *game);
 void	new_fireball(t_game *game, int x, int y);
-int		render_fireball(t_game *game);
+void	render_fireball(t_game *game);
 
 //PLAYER
 void	player_config(t_game *game);

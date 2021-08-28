@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 09:48:10 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/27 15:59:38 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/28 10:51:54 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,8 @@ static void	make_layout(t_game *game, int x, int y, char *content)
 		content += x;
 		index++;
 	}
+	game->map.w = x;
+	game->map.h = y;
 }
 
 int	get_all_content(int fd, t_game *game)
@@ -80,8 +82,6 @@ int	get_all_content(int fd, t_game *game)
 		line = get_next_line(fd);
 	}
 	make_layout(game, x, y, all_content);
-	game->map.w = x;
-	game->map.h = y;
 	return (1);
 }
 

@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/27 18:56:44 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/27 20:02:34 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/28 12:20:33 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,30 +34,34 @@ void	free_fireball(t_fireball *last_one, t_fireball *ball, t_game *game)
 	free(ball);
 }
 
-int	render_fireball(t_game *game)
+void	draw_fireball(t_fireball *fireball, t_game *game)
+{
+	int			x;
+	int			y;
+
+	x = (fireball->x - game->map.x) * BLOCK_SIZE;
+	y = (fireball->y - game->map.y) * BLOCK_SIZE;
+	copy_img_to(&game->map.map, &fireball->sprite,
+		to_array(x, y, BLOCK_SIZE, BLOCK_SIZE));
+}
+
+void	render_fireball(t_game *game)
 {
 	t_fireball	*fireball;
 	t_fireball	*last_one;
-	int			x;
-	int			y;
-	
+
 	fireball = game->fireballs;
 	last_one = 0;
 	while (fireball)
 	{
 		if (is_on_map_fireball(fireball, game))
-		{
-			x = (fireball->x - game->map.x) * BLOCK_SIZE;
-			y = (fireball->y - game->map.y) * BLOCK_SIZE;
-			copy_img_to(&game->map.map, &fireball->sprite,
-				to_array(x, y, BLOCK_SIZE, BLOCK_SIZE));
-		}
+			draw_fireball(fireball, game);
 		if (fireball->steps == 10)
 		{
 			free_fireball(last_one, fireball, game);
 			fireball = last_one;
 			if (!fireball)
-				break;
+				break ;
 		}
 		else
 		{

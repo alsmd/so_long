@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/24 10:32:47 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/27 20:33:25 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/28 13:22:04 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +39,8 @@ void	render_user(t_game *game)
 
 void	check_player_collision(int x, int y, t_game *game)
 {
-	if ((game->player.x + game->map.x) == x && (game->player.y + game->map.y) == y)
-	{
-		game->game_over = 1;
-	}
+	if ((game->player.x + game->map.x) == x && \
+		(game->player.y + game->map.y) == y)
+		//game->game_over = 1;
+		;
 }

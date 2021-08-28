@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 13:15:44 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/27 14:29:36 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/28 13:19:57 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ static void	set_tile(char c, t_game *game, int x, int y)
 	if (c == '1')
 		path = "./imgs/wall3.xpm";
 	if (c == 'E')
-		path = "./imgs/portal2.xpm";
+		path = "./imgs/exit_lock.xpm";
 	if (c == 'C' || c == 'P' || c == '0')
 	{
 		if (i % 18 == 0)
@@ -54,6 +54,7 @@ static void	set_tile(char c, t_game *game, int x, int y)
 	tile.addr = mlx_get_data_addr(tile.img, &tile.bits_per_pixel,
 			&tile.line_length, &tile.endin);
 	copy_img_to(&game->map.full_map, &tile, to_array(x, y, size, size));
+	free(tile.img);
 }
 
 static void	draw_block(t_game *game, int x, int y)
