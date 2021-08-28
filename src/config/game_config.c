@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 13:04:32 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/27 17:56:55 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/28 09:14:11 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,12 @@ void	game_config(t_game *game)
 	enemy_config(game);
 	if (game->map.w > 14)
 		game->width = 14;
+	else
+		game->width = game->map.w;
 	if (game->map.h > 10)
 		game->height = 10;
+	else
+		game->height = game->map.h;
 	game->vars.win = mlx_new_window(game->vars.mlx, game->width * BLOCK_SIZE,
 			game->height * BLOCK_SIZE, "so_long");
 }

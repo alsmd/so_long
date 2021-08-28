@@ -18,6 +18,7 @@ clang -g -Imlx -Ibass -c src/config/player_config.c -o src/config/player_config.
 clang -g -Imlx -Ibass -c src/config/new_item.c -o src/config/new_item.o
 clang -g -Imlx -Ibass -c src/config/enemy_config.c -o src/config/enemy_config.o
 clang -g -Imlx -Ibass -c src/config/fireball_config.c -o src/config/fireball_config.o
+ 
 clang -g -Imlx -Ibass -c src/actions/player_action.c -o src/actions/player_action.o
 clang -g -Imlx -Ibass -c src/actions/game_init.c -o src/actions/game_init.o
 clang -g -Imlx -Ibass -c src/actions/item_action.c -o src/actions/item_action.o

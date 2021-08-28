@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/27 17:04:12 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/27 20:00:40 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/28 09:44:04 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,23 +54,37 @@ int	is_on_map_enemies(t_enemy *enemy, t_game *game)
 	return (is_on_map);
 }
 
+void	draw_enemy(t_enemy *enemy, t_game *game)
+{
+	int		i;
+	int		x;
+	int		y;
+	int		w;
+	t_enemy	cpy;
+
+	i = enemy->active;
+	x = ((enemy->x - game->map.x) * BLOCK_SIZE);
+	y = (((enemy->y - game->map.y) * BLOCK_SIZE) + 10) - enemy->frame;
+	cpy = *enemy;
+	cpy.x += 1;
+	if (is_on_map_enemies(&cpy, game))
+		w = enemy->sprites[i].w;
+	else
+		w = BLOCK_SIZE;
+	copy_img_to(&game->map.map, &enemy->sprites[i],
+				to_array(x, y, w, enemy->sprites[i].h));
+}
+
 void	render_enemies(t_game *game)
 {
 	t_enemy	*enemy;
-	int		x;
-	int		y;
-	int		i;
 
 	enemy = game->enemies;
 	while (enemy)
 	{
 		if (is_on_map_enemies(enemy, game))
 		{
-			x = ((enemy->x - game->map.x) * BLOCK_SIZE) + 25;
-			y = (((enemy->y - game->map.y) * BLOCK_SIZE) + 10) - enemy->frame;
-			i = enemy->active;
-			copy_img_to(&game->map.map, &enemy->sprites[i],
-				to_array(x, y, enemy->sprites[i].w, enemy->sprites[i].h));
+			draw_enemy(enemy, game);
 		}
 		enemy_animation(game, enemy);
 		enemy = enemy->next;
