@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 09:21:04 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/28 13:07:09 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/28 14:01:55 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -115,6 +115,7 @@ typedef struct s_game
 	int			height;
 	int			block_size;
 	int			game_over;
+	int			win;
 }	t_game;
 
 /*Prototypes*/
@@ -126,6 +127,7 @@ void	create_img(t_data *img, int w, int h, t_game *game);
 void	load_img(t_data *img, char *path, t_game *game);
 void	print_over(t_game *game);
 void	check_exit(t_game *game);
+void	print_screen(t_game *game);
 
 //MAP
 void	map_config(t_game *game);

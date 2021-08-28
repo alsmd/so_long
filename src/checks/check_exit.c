@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/28 13:01:12 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/28 13:24:41 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/28 13:51:43 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,10 +49,19 @@ static void	open_exits(t_game *game)
 void	check_exit(t_game *game)
 {
 	static int	open;
+	int			x;
+	int			y;
 
 	if (!game->items && !open)
 	{
 		open = 1;
 		open_exits(game);
+	}
+	if (!game->items)
+	{
+		x = game->player.x + game->map.x;
+		y = game->player.y + game->map.y;
+		if (game->map.layout[y][x] == 'E')
+			game->win = 1;
 	}
 }

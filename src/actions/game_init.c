@@ -6,7 +6,7 @@
 /*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 13:10:41 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/28 13:11:24 by flavio           ###   ########.fr       */
+/*   Updated: 2021/08/28 14:58:34 by flavio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,20 @@
 
 int	frame_update(t_game *game)
 {
+	static int screen;
+
 	if (game->game_over)
 	{
-		print_over(game);
+		if (!screen)
+			print_over(game);
+		screen = 1;
+		return (1);
+	}
+	if (game->win)
+	{
+		if (!screen)
+			print_screen(game);
+		screen = 1;
 		return (1);
 	}
 	get_active_map(game);
@@ -32,7 +43,7 @@ int	frame_update(t_game *game)
 
 int	key_hook(int keycode, t_game *game)
 {
-	if (game->game_over)
+	if (game->game_over || game->win)
 		return (1);
 	player_action(keycode, game);
 	return (1);
