@@ -20,6 +20,7 @@ void	player_config(t_game *game)
 
 	i = 0;
 	player = &game->player;
+	player->steps = 0;
 	full_sprite.w = 144;
 	full_sprite.h = 256;
 	player->w = 48;

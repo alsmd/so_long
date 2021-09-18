@@ -14,7 +14,8 @@
 
 int	frame_update(t_game *game)
 {
-	static int screen;
+	static int	screen;
+	char		*count;
 
 	if (game->game_over)
 	{
@@ -38,6 +39,11 @@ int	frame_update(t_game *game)
 	check_exit(game);
 	mlx_put_image_to_window(game->vars.mlx, game->vars.win,
 		game->map.map.img, 0, 0);
+	count = ft_itoa(game->player.steps);
+	mlx_string_put(game->vars.mlx, game->vars.win, (game->width * BLOCK_SIZE) - 20\
+		, 20, 0xF35C00, count
+	);
+	free(count);
 	return (1);
 }
 
@@ -49,9 +55,16 @@ int	key_hook(int keycode, t_game *game)
 	return (1);
 }
 
+int	close_game(t_game *game)
+{
+	mlx_destroy_window(game->vars.mlx, game->vars.win);
+	exit(0);
+}
+
 void	game_init(t_game *game)
 {
 	mlx_loop_hook(game->vars.mlx, frame_update, game);
+	mlx_hook(game->vars.win, DestroyNotify, StructureNotifyMask, close_game, game);
 	mlx_hook(game->vars.win, KeyPress, KeyPressMask, key_hook, game);
 	mlx_loop(game->vars.mlx);
 }

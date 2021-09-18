@@ -167,6 +167,7 @@ void	render_items(t_game *game);
 void	*ft_calloc(size_t nmemb, size_t size);
 void	ft_strcat(char *dest, char *src);
 int		ft_strlen(const char *s);
+char	*ft_itoa(int n);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 int		is_in(char *str, char c);
 void	my_mlx_pixel_put(t_data *data, int x, int y, int color);

@@ -20,6 +20,7 @@ void	up(t_game *game)
 			game->map.y -= 1;
 		else
 			game->player.y -= 1;
+		game->player.steps += 1;
 	}
 	game->player.frame = 0;
 }
@@ -33,6 +34,7 @@ void	down(t_game *game)
 			game->map.y += 1;
 		else
 			game->player.y += 1;
+		game->player.steps += 1;
 	}
 	game->player.frame = 2;
 }
@@ -45,6 +47,7 @@ void	left(t_game *game)
 			game->map.x -= 1;
 		else
 			game->player.x -= 1;
+		game->player.steps += 1;
 	}
 	game->player.frame = 3;
 }
@@ -59,6 +62,7 @@ void	right(t_game *game)
 			game->map.x += 1;
 		else
 			game->player.x += 1;
+		game->player.steps += 1;
 	}
 	game->player.frame = 1;
 }
