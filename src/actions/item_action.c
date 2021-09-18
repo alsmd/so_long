@@ -50,17 +50,12 @@ int	item_collision(int x,int y, t_game *game)
 	return (0);
 }
 
-void	free_item(t_item **last_one, t_item *item, t_game *game)
+void	free_item(t_item *last_one, t_item *item, t_game *game)
 {
-	if (!*last_one)
-	{
-		if (item->next)
-			game->items = item->next;
-		else
-			game->items = 0;
-	}
+	if (!last_one)
+		game->items = item->next;
 	else
-		(*last_one)->next = item->next;
+		last_one->next = item->next;
 	free(item->sprite.img);
 	free(item);
 }
@@ -82,10 +77,12 @@ void	render_items(t_game *game)
 			y = (item->y - game->map.y) * BLOCK_SIZE;
 			if (item_collision(item->x, item->y, game))
 			{
-				free_item(&last_one, item, game);
+				free_item(last_one, item, game);
+				if (!last_one)
+					last_one = game->items;
 				if (!last_one)
 					break ;
-				item = last_one;
+				item = last_one->next;
 				continue ;
 			}	
 			copy_img_to(&game->map.map, &item->sprite,
