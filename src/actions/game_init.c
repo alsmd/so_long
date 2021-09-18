@@ -47,18 +47,20 @@ int	frame_update(t_game *game)
 	return (1);
 }
 
+int	close_game(t_game *game)
+{
+	mlx_destroy_window(game->vars.mlx, game->vars.win);
+	exit(0);
+}
+
 int	key_hook(int keycode, t_game *game)
 {
 	if (game->game_over || game->win)
 		return (1);
 	player_action(keycode, game);
+	if (keycode == ESC)
+		close_game(game);
 	return (1);
-}
-
-int	close_game(t_game *game)
-{
-	mlx_destroy_window(game->vars.mlx, game->vars.win);
-	exit(0);
 }
 
 void	game_init(t_game *game)

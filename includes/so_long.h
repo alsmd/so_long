@@ -30,9 +30,9 @@
 # define A 97
 # define S 115
 # define D 100
+# define ESC 65307
 # define BLOCK_SIZE 64
 # define OBJECTS "EC01P"
-
 /*ENUM*/
 enum
 {
