@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 09:21:04 by flavio            #+#    #+#             */
-/*   Updated: 2021/09/18 13:02:10 by user42           ###   ########.fr       */
+/*   Updated: 2021/09/18 13:34:13 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -144,6 +144,7 @@ int		check_map(char *map_path, t_game *game);
 void	get_active_map(t_game *game);
 int		check_ex(char *file);
 int		check_surround_wall(t_game *game);
+int		check_structure(t_game *game);
 
 //Enemy
 void	enemy_config(t_game *game);

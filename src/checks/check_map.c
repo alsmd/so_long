@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 09:48:10 by flavio            #+#    #+#             */
-/*   Updated: 2021/09/18 13:02:22 by user42           ###   ########.fr       */
+/*   Updated: 2021/09/18 13:34:15 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,6 +105,8 @@ int	check_map(char	*map_path, t_game *game)
 	}
 	close(fd);
 	if (!(check_surround_wall(game)))
+		return (0);
+	if (!(check_structure(game)))
 		return (0);
 	return (1);
 }
