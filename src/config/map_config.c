@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   map_config.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
+/*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 13:15:44 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/28 13:19:57 by flavio           ###   ########.fr       */
+/*   Updated: 2021/09/18 15:14:13 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,13 @@ void	get_active_map(t_game *game)
 
 	w = game->width * BLOCK_SIZE;
 	h = game->height * BLOCK_SIZE;
+	if (!game->map.map.img)
+	{
+		create_img(&game->map.map, w, h, game);
+		fix_cam(game);
+	}
 	x = game->map.x * BLOCK_SIZE;
 	y = game->map.y * BLOCK_SIZE;
-	if (!game->map.map.img)
-		create_img(&game->map.map, w, h, game);
 	copy_img_from(&game->map.map, &game->map.full_map, to_array(x, y, w, h));
 }
 
