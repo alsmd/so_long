@@ -50,9 +50,7 @@ static void	set_tile(char c, t_game *game, int x, int y)
 			path = "./imgs/floor3.xpm";
 		i++;
 	}
-	tile.img = mlx_xpm_file_to_image(game->vars.mlx, path, &size, &size);
-	tile.addr = mlx_get_data_addr(tile.img, &tile.bits_per_pixel,
-			&tile.line_length, &tile.endin);
+	load_img(&tile, path, game);
 	copy_img_to(&game->map.full_map, &tile, to_array(x, y, size, size));
 	free(tile.img);
 }

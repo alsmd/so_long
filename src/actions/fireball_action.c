@@ -27,7 +27,7 @@ int	is_on_map_fireball(t_fireball *ball, t_game *game)
 void	free_fireball(t_fireball *last_one, t_fireball *ball, t_game *game)
 {
 	if (!last_one)
-		game->fireballs = 0;
+		game->fireballs = ball->next;
 	else
 		last_one->next = ball->next;
 	free(ball->sprite.img);
@@ -61,6 +61,8 @@ void	render_fireball(t_game *game)
 		{
 			free_fireball(last_one, fireball, game);
 			fireball = last_one;
+			if (!fireball)
+				fireball = game->fireballs;
 			if (!fireball)
 				break ;
 		}

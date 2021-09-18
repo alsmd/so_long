@@ -31,27 +31,27 @@ int	check_surround(int y, int x, t_game *game)
 void	new_enemy(t_game *game, int x, int y)
 {
 	t_enemy	*begin;
-	t_enemy	*new_item;
+	t_enemy	*new_enemy;
 
-	new_item = (t_enemy *) ft_calloc(1, sizeof(t_enemy));
-	new_item->x = x;
-	new_item->y = y;
-	new_item->sprites[0].w = 80;
-	new_item->sprites[0].h = 96;
-	new_item->sprites[1].w = 122;
-	new_item->sprites[1].h = 103;
-	new_item->sprites[2].w = 86;
-	new_item->sprites[2].h = 110;
-	load_img(&new_item->sprites[0], "./imgs/enemy.xpm", game);
-	load_img(&new_item->sprites[1], "./imgs/enemy2.xpm", game);
-	load_img(&new_item->sprites[2], "./imgs/enemy3.xpm", game);
+	new_enemy = (t_enemy *) ft_calloc(1, sizeof(t_enemy));
+	new_enemy->x = x;
+	new_enemy->y = y;
+	new_enemy->sprites[0].w = 80;
+	new_enemy->sprites[0].h = 96;
+	new_enemy->sprites[1].w = 122;
+	new_enemy->sprites[1].h = 103;
+	new_enemy->sprites[2].w = 86;
+	new_enemy->sprites[2].h = 110;
+	load_img(&new_enemy->sprites[0], "./imgs/enemy.xpm", game);
+	load_img(&new_enemy->sprites[1], "./imgs/enemy2.xpm", game);
+	load_img(&new_enemy->sprites[2], "./imgs/enemy3.xpm", game);
 	begin = game->enemies;
 	while (begin && begin->next)
 		begin = begin->next;
 	if (begin)
-		begin->next = new_item;
+		begin->next = new_enemy;
 	else
-		game->enemies = new_item;
+		game->enemies = new_enemy;
 }
 
 void	enemy_config(t_game *game)

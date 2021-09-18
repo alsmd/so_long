@@ -64,7 +64,7 @@ void	draw_enemy(t_enemy *enemy, t_game *game)
 
 	i = enemy->active;
 	x = ((enemy->x - game->map.x) * BLOCK_SIZE);
-	y = (((enemy->y - game->map.y) * BLOCK_SIZE) + 10) - enemy->frame;
+	y = (((enemy->y - game->map.y) * BLOCK_SIZE)) - enemy->frame;
 	cpy = *enemy;
 	cpy.x += 1;
 	if (is_on_map_enemies(&cpy, game))
