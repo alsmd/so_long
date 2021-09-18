@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check_map.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
+/*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 09:48:10 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/28 10:51:54 by flavio           ###   ########.fr       */
+/*   Updated: 2021/09/18 12:46:42 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,6 +91,8 @@ int	check_map(char	*map_path, t_game *game)
 	int		x;
 	int		y;
 
+	if (!(check_ex(map_path)))
+		return (0);
 	fd = open(map_path, O_RDONLY);
 	if (fd == -1)
 		return (0);

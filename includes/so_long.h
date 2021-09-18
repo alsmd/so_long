@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 09:21:04 by flavio            #+#    #+#             */
-/*   Updated: 2021/09/18 12:36:30 by user42           ###   ########.fr       */
+/*   Updated: 2021/09/18 12:45:43 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -142,6 +142,7 @@ int		check_error(int error);
 void	map_config(t_game *game);
 int		check_map(char *map_path, t_game *game);
 void	get_active_map(t_game *game);
+int		check_ex(char *file);
 
 //Enemy
 void	enemy_config(t_game *game);
