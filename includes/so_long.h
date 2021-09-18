@@ -38,7 +38,7 @@ enum
 {
 	FILE_CANT_BE_OPEN = 1,
 	INVALID_MAP,
-
+	INVALID_PARAM_NB
 };
 
 /*STRUCTS*/
