@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   so_long.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
+/*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 09:21:04 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/28 14:01:55 by flavio           ###   ########.fr       */
+/*   Updated: 2021/09/18 12:36:30 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@
 /*ENUM*/
 enum
 {
-	FILE_CANT_BE_OPEN = 1,
+	SUCCESS,
 	INVALID_MAP,
 	INVALID_PARAM_NB
 };
@@ -136,6 +136,7 @@ void	load_img(t_data *img, char *path, t_game *game);
 void	print_over(t_game *game);
 void	check_exit(t_game *game);
 void	print_screen(t_game *game);
+int		check_error(int error);
 
 //MAP
 void	map_config(t_game *game);

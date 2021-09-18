@@ -23,10 +23,10 @@ int	main(int argc, char *argv[])
 		if (check_map(argv[1], &game))
 			game_config(&game);
 		else
-			return (1);
+			return (check_error(INVALID_MAP));
 		game_init(&game);
 	}
 	else
-		return (1);
-	return (0);
+		return (check_error(INVALID_PARAM_NB));
+	return (SUCCESS);
 }
