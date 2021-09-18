@@ -33,6 +33,14 @@
 # define BLOCK_SIZE 64
 # define OBJECTS "EC01P"
 
+/*ENUM*/
+enum
+{
+	FILE_CANT_BE_OPEN = 1,
+	INVALID_MAP,
+
+};
+
 /*STRUCTS*/
 typedef struct s_vars
 {
