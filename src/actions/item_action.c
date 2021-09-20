@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   item_action.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
+/*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/27 11:59:37 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/28 12:14:55 by flavio           ###   ########.fr       */
+/*   Updated: 2021/09/20 11:52:38 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,19 +30,7 @@ static void	item_animation(t_item *item)
 	}
 }
 
-int	is_on_map(t_item *item, t_game *game)
-{
-	int	is_on_map;
-
-	is_on_map = 1;
-	if (!(item->x >= game->map.x && item->x < game->map.x + game->width))
-		is_on_map = 0;
-	if (!(item->y >= game->map.y && item->y < game->map.y + game->height))
-		is_on_map = 0;
-	return (is_on_map);
-}
-
-int	item_collision(int x,int y, t_game *game)
+static int	item_collision(int x,int y, t_game *game)
 {
 	if ((game->player.x + game->map.x) == x && \
 		(game->player.y + game->map.y) == y)
@@ -50,7 +38,7 @@ int	item_collision(int x,int y, t_game *game)
 	return (0);
 }
 
-void	free_item(t_item *last_one, t_item *item, t_game *game)
+static void	free_item(t_item *last_one, t_item *item, t_game *game)
 {
 	if (!last_one)
 		game->items = item->next;
@@ -71,7 +59,7 @@ void	render_items(t_game *game)
 	last_one = 0;
 	while (item)
 	{
-		if (is_on_map(item, game))
+		if (is_on_map(item->x, item->y, game))
 		{
 			x = (item->x - game->map.x) * BLOCK_SIZE;
 			y = (item->y - game->map.y) * BLOCK_SIZE;

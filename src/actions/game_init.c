@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   game_init.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
+/*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 13:10:41 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/28 14:58:34 by flavio           ###   ########.fr       */
+/*   Updated: 2021/09/20 11:52:15 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/so_long.h"
 
-int	frame_update(t_game *game)
+static int	frame_update(t_game *game)
 {
 	static int	screen;
 	char		*count;
@@ -47,13 +47,13 @@ int	frame_update(t_game *game)
 	return (1);
 }
 
-int	close_game(t_game *game)
+static int	close_game(t_game *game)
 {
 	mlx_destroy_window(game->vars.mlx, game->vars.win);
 	exit(0);
 }
 
-int	key_hook(int keycode, t_game *game)
+static int	key_hook(int keycode, t_game *game)
 {
 	if (game->game_over || game->win)
 		return (1);

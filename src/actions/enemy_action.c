@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   enemy_action.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
+/*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/27 17:04:12 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/28 10:49:07 by flavio           ###   ########.fr       */
+/*   Updated: 2021/09/20 11:51:25 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,19 +42,19 @@ static void	enemy_animation(t_game *game, t_enemy *enemy)
 	}
 }
 
-int	is_on_map_enemies(t_enemy *enemy, t_game *game)
+int	is_on_map(int x, int y, t_game *game)
 {
 	int	is_on_map;
 
 	is_on_map = 1;
-	if (!(enemy->x >= game->map.x && enemy->x < game->map.x + game->width))
+	if (!(x >= game->map.x && x < game->map.x + game->width))
 		is_on_map = 0;
-	if (!(enemy->y >= game->map.y && enemy->y < game->map.y + game->height))
+	if (!(y >= game->map.y && y < game->map.y + game->height))
 		is_on_map = 0;
 	return (is_on_map);
 }
 
-void	draw_enemy(t_enemy *enemy, t_game *game)
+static void	draw_enemy(t_enemy *enemy, t_game *game)
 {
 	int		i;
 	int		x;
@@ -65,9 +65,7 @@ void	draw_enemy(t_enemy *enemy, t_game *game)
 	i = enemy->active;
 	x = ((enemy->x - game->map.x) * BLOCK_SIZE);
 	y = (((enemy->y - game->map.y) * BLOCK_SIZE)) - enemy->frame;
-	cpy = *enemy;
-	cpy.x += 1;
-	if (is_on_map_enemies(&cpy, game))
+	if (is_on_map(enemy->x + 1, enemy->y, game))
 		w = enemy->sprites[i].w;
 	else
 		w = BLOCK_SIZE;
@@ -82,7 +80,7 @@ void	render_enemies(t_game *game)
 	enemy = game->enemies;
 	while (enemy)
 	{
-		if (is_on_map_enemies(enemy, game))
+		if (is_on_map(enemy->x, enemy->y, game))
 		{
 			draw_enemy(enemy, game);
 		}

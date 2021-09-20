@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 09:21:04 by flavio            #+#    #+#             */
-/*   Updated: 2021/09/18 15:17:47 by user42           ###   ########.fr       */
+/*   Updated: 2021/09/20 11:45:38 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -137,6 +137,7 @@ void	print_over(t_game *game);
 void	check_exit(t_game *game);
 void	print_screen(t_game *game);
 int		check_error(int error);
+int		is_on_map(int x, int y, t_game *game);
 
 //MAP
 void	map_config(t_game *game);

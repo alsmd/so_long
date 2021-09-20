@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   game_config.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
+/*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 13:04:32 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/28 09:14:11 by flavio           ###   ########.fr       */
+/*   Updated: 2021/09/18 16:06:02 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,5 @@ void	game_config(t_game *game)
 	else
 		game->height = game->map.h;
 	game->vars.win = mlx_new_window(game->vars.mlx, game->width * BLOCK_SIZE,
-			game->height * BLOCK_SIZE, "so_long");
+			game->height * BLOCK_SIZE, "Dungeon Zone");
 }

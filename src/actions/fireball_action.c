@@ -3,28 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   fireball_action.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: flavio <flavio@student.42.fr>              +#+  +:+       +#+        */
+/*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/27 18:56:44 by flavio            #+#    #+#             */
-/*   Updated: 2021/08/28 15:04:54 by flavio           ###   ########.fr       */
+/*   Updated: 2021/09/20 11:51:45 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/so_long.h"
 
-int	is_on_map_fireball(t_fireball *ball, t_game *game)
-{
-	int	is_on_map;
-
-	is_on_map = 1;
-	if (!(ball->x >= game->map.x && ball->x < game->map.x + game->width))
-		is_on_map = 0;
-	if (!(ball->y >= game->map.y && ball->y < game->map.y + game->height))
-		is_on_map = 0;
-	return (is_on_map);
-}
-
-void	free_fireball(t_fireball *last_one, t_fireball *ball, t_game *game)
+static void	free_fireball(t_fireball *last_one, t_fireball *ball, t_game *game)
 {
 	if (!last_one)
 		game->fireballs = ball->next;
@@ -34,7 +22,7 @@ void	free_fireball(t_fireball *last_one, t_fireball *ball, t_game *game)
 	free(ball);
 }
 
-void	draw_fireball(t_fireball *fireball, t_game *game)
+static void	draw_fireball(t_fireball *fireball, t_game *game)
 {
 	int			x;
 	int			y;
@@ -55,7 +43,7 @@ void	render_fireball(t_game *game)
 	last_one = 0;
 	while (fireball)
 	{
-		if (is_on_map_fireball(fireball, game))
+		if (is_on_map(fireball->x, fireball->y, game))
 			draw_fireball(fireball, game);
 		if (fireball->steps == 8)
 		{
